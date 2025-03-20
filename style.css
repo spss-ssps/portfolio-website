@@ -1,0 +1,21 @@
+body {
+    background-color: #F7F5E8;
+}
+@font-face {
+    font-family: comfortaa;
+    src: url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+}
+#pisces {
+    
+}
+h1 {
+    font-family: comfortaa;
+    font-size: 50px;
+    color: #000;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
