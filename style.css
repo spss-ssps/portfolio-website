@@ -6,7 +6,14 @@ body {
     src: url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 }
 #pisces {
-    
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    width: 80%;
+    height: 90%;
+    z-index: -1;
 }
 h1 {
     font-family: comfortaa;
@@ -18,4 +25,9 @@ h1 {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
+}
+#mousetrace {
+    color: #000;
+    z-index: 3;
 }
