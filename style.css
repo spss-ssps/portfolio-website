@@ -18,14 +18,24 @@ body {
 h1 {
     font-family: comfortaa;
     font-size: 50px;
+    /* font-size: 3vw; */
     color: #000;
     text-align: center;
     margin: 0 auto;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 8vh;
+    left: 9vw;
+    /* transform: translate(-50%, -50%); */
     z-index: 1;
+}
+#logo {
+    position: absolute;
+    top: 1vh;
+    left: 1vw;
+    width: 96px;
+    height: auto;
+    transform: translate(0, 0);
+    z-index: 2;,
 }
 #mousetrace {
     color: #000;
