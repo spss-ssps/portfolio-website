@@ -5,16 +5,32 @@ body {
     font-family: comfortaa;
     src: url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 }
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    #logo {
+        width: 72px;
+    }
+    #pisces {
+        width: 10%;
+        height: 10%;
+    }
+}
 #pisces {
-    position: absolute;
-    top: 45%;
+    width: 5%;
+    height: 5%;
+    background-size: cover;
+    position: fixed;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.5;
-    width: 80%;
-    height: 90%;
     z-index: -1;
 }
+  
 h1 {
     font-family: comfortaa;
     font-size: 50px;
@@ -23,21 +39,84 @@ h1 {
     text-align: center;
     margin: 0 auto;
     position: absolute;
-    top: 8vh;
-    left: 9vw;
-    /* transform: translate(-50%, -50%); */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
 }
+#starpurple {
+    position: fixed;
+    top: 10vh;
+    left: 10vw;
+    width: 15%;
+    transition: transform 0.8s ease;
+    transform: rotate(0deg);
+    transform-origin: center center; /* For better rotation behavior */
+    z-index: 5;
+}
+
+#starpurple:hover {
+    transform: scale(1.1) rotate(180deg);
+}
 #logo {
-    position: absolute;
+    position: fixed;
     top: 1vh;
     left: 1vw;
     width: 96px;
     height: auto;
     transform: translate(0, 0);
-    z-index: 2;,
+    z-index: 5;
+  
+}
+.logo-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Initially hide the menu */
+.menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(97, 61, 149, 0.85); /* Changed to a more purple color */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: comfortaa;
+    margin-top: 20px;
+    z-index: 10; 
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    margin: 5px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    font-family: comfortaa; /* Add Comfortaa font to links specifically */
+    display: block; /* Make links fill the available width */
+}
+
+.menu ul li a:hover {
+    background-color: #8a63b1; /* Changed to a lighter purple for hover effect */
+}
+
+/* Show the menu when hovering over the logo */
+.logo-container:hover .menu {
+    display: block;
 }
 #mousetrace {
-    color: #000;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: 3;
+    /* pointer-events: none; */
 }
