@@ -10,7 +10,8 @@ body {
         font-size: 14px;
     }
     h1 {
-        font-size: 30px;
+        font-size: 24px;
+        left: 90px;
     }
     #logo {
         width: 72px;
@@ -21,43 +22,126 @@ body {
     }
 }
 #pisces {
-    width: 5%;
-    height: 5%;
+    width: 60vw;
+    height: 80vh;
     background-size: cover;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    pointer-events: none;
+}
+
+#pisces img {
+    width: 100%; 
+    height: 100%;
+    object-fit: contain;
 }
   
 h1 {
     font-family: comfortaa;
     font-size: 50px;
-    /* font-size: 3vw; */
     color: #000;
-    text-align: center;
-    margin: 0 auto;
+    position: fixed;
+    top: 4vh;
+    left: 120px;
+    margin: 0;
+    z-index: 5;
+    transform: none;
+}
+
+#starpurple {
+    position: absolute;
+    top: 32vh;
+    left: 24.8vw;
+    width: 4%;
+    z-index: 5;
+}
+#starpurple img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease; /* Smooth rotation effect */
+
+}
+
+#starpurple img:hover {
+    transform: rotate(180deg); /* Rotate the image by 180 degrees on hover */
+}
+
+#starpurple a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#starpurple .performance-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 1;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+    font-family: comfortaa, sans-serif;
+    font-weight: 700;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
 }
-#starpurple {
+
+#starpurple:hover .performance-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+#stargreen {
     position: fixed;
-    top: 10vh;
-    left: 10vw;
-    width: 15%;
+    top: 44.5vh;
+    right: 34vw;
+    width: 4%;
+    transition: transform 0.8s ease;
+    transform: rotate(0deg);
+    transform-origin: center center; /* For better rotation behavior */
+    z-index: 5;
+    rotate: 20deg;
+}
+
+#stargreen:hover {
+    transform: scale(1.1) rotate(180deg);
+}
+
+#starpink {
+    position: fixed;
+    bottom: 28vh;
+    left: 29vw;
+    width: 4%;
     transition: transform 0.8s ease;
     transform: rotate(0deg);
     transform-origin: center center; /* For better rotation behavior */
     z-index: 5;
 }
 
-#starpurple:hover {
+#starpink:hover {
     transform: scale(1.1) rotate(180deg);
 }
+
+#staryellow {
+    position: fixed;
+    top: 48vh;
+    left: 47vw;
+    width: 4.5%;
+    transition: transform 0.8s ease;
+    transform: rotate(0deg);
+    transform-origin: center center; /* For better rotation behavior */
+    z-index: 5;
+    rotate: 5deg;
+}
+
+#staryellow:hover {
+    transform: scale(1.1) rotate(180deg);
+}
+
 #logo {
     position: fixed;
     top: 1vh;
@@ -75,15 +159,19 @@ h1 {
 
 /* Initially hide the menu */
 .menu {
+    top: 7.5vh;
+    left: 1vw;
     display: none;
     position: absolute;
-    background-color: rgba(97, 61, 149, 0.85); /* Changed to a more purple color */
+    background-color: #0e010e71; /* Solid purple color */
     padding: 10px;
     border-radius: 5px;
     font-family: comfortaa;
     margin-top: 20px;
     z-index: 10; 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
 }
+
 
 .menu ul {
     list-style-type: none;
@@ -99,18 +187,20 @@ h1 {
     color: white;
     text-decoration: none;
     padding: 5px 10px;
-    font-family: comfortaa; /* Add Comfortaa font to links specifically */
-    display: block; /* Make links fill the available width */
+    font-family: comfortaa;
+    display: block;
 }
 
 .menu ul li a:hover {
-    background-color: #8a63b1; /* Changed to a lighter purple for hover effect */
+    background-color: #a64dff; /* Brighter purple for hover effect */
+    border-radius: 3px;
 }
 
 /* Show the menu when hovering over the logo */
 .logo-container:hover .menu {
     display: block;
 }
+
 #mousetrace {
     position: absolute;
     top: 0;
