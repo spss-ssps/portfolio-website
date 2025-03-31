@@ -1,5 +1,6 @@
 body {
     background-color: #F7F5E8;
+    font-family: comfortaa, sans-serif;
 }
 
 @font-face {
@@ -11,18 +12,58 @@ body {
     body {
         font-size: 14px;
     }
+    
+
     h1 {
         font-size: 24px;
-        left: 90px;
+        left: 10px;
+        position: relative; /* Relative for mobile to prevent fixed positioning issues */
     }
-    #logo {
-        width: 72px;
-    }
+    
     #pisces {
-        width: 10%;
-        height: 10%;
+        width: 100vw;
+        height: 40vh;
+        rotate: 90deg;
     }
-}
+    
+    #starpurple, #stargreen, #starpink, #staryellow {
+        width: 10%;
+        top: auto;
+        bottom: auto;
+        left: auto;
+        right: auto;
+    }
+
+    #starpurple {
+        top: 20vh;
+        left: 20vw;
+    }
+    
+    #stargreen {
+        top: 40vh;
+        right: 10vw;
+    }
+    
+    #starpink {
+        bottom: 10vh;
+        left: 15vw;
+    }
+    
+    #staryellow {
+        top: 30vh;
+        left: 35vw;
+    }
+
+    #logo {
+        width: 72px; /* Scale down logo on mobile */
+    }
+
+    /* Adjust menu for mobile */
+    .menu {
+        font-size: 14px;
+        top: 10vh;
+        left: 5vw;
+    }
 
 #pisces {
     width: 60vw;
