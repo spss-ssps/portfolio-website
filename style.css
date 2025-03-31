@@ -1,10 +1,12 @@
 body {
     background-color: #F7F5E8;
 }
+
 @font-face {
     font-family: comfortaa;
     src: url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 }
+
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -21,6 +23,7 @@ body {
         height: 10%;
     }
 }
+
 #pisces {
     width: 60vw;
     height: 80vh;
@@ -38,7 +41,7 @@ body {
     height: 100%;
     object-fit: contain;
 }
-  
+
 h1 {
     font-family: comfortaa;
     font-size: 50px;
@@ -58,11 +61,11 @@ h1 {
     width: 4%;
     z-index: 5;
 }
+
 #starpurple img {
     width: 100%;
     height: auto;
     transition: transform 0.8s ease; /* Smooth rotation effect */
-
 }
 
 #starpurple img:hover {
@@ -82,7 +85,7 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(0, 0, 0);
-    font-size: 14px;
+    font-size: 20px;
     font-family: comfortaa, sans-serif;
     font-weight: 700;
     visibility: hidden;
@@ -95,52 +98,143 @@ h1 {
     opacity: 1;
 }
 
+/* Green star */
 #stargreen {
     position: fixed;
     top: 44.5vh;
     right: 34vw;
     width: 4%;
-    transition: transform 0.8s ease;
-    transform: rotate(0deg);
-    transform-origin: center center; /* For better rotation behavior */
     z-index: 5;
-    rotate: 20deg;
 }
 
-#stargreen:hover {
-    transform: scale(1.1) rotate(180deg);
+#stargreen img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease;
 }
 
+#stargreen img:hover {
+    transform: rotate(180deg); /* Rotate the image by 180 degrees on hover */
+}
+
+#stargreeen a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#stargreen .aboutme-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: comfortaa, sans-serif;
+    font-weight: 700;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#stargreen:hover .aboutme-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* Pink star */
 #starpink {
     position: fixed;
     bottom: 28vh;
     left: 29vw;
     width: 4%;
-    transition: transform 0.8s ease;
-    transform: rotate(0deg);
-    transform-origin: center center; /* For better rotation behavior */
     z-index: 5;
 }
 
-#starpink:hover {
-    transform: scale(1.1) rotate(180deg);
+#starpink img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease;
 }
 
+#starpink img:hover {
+    transform: rotate(180deg); /* Rotate the image by 180 degrees on hover */
+}
+
+#starpink a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#starpink .media-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: comfortaa, sans-serif;
+    font-weight: 700;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#starpink:hover .media-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Yellow star */
 #staryellow {
     position: fixed;
     top: 48vh;
     left: 47vw;
     width: 4.5%;
-    transition: transform 0.8s ease;
-    transform: rotate(0deg);
-    transform-origin: center center; /* For better rotation behavior */
     z-index: 5;
-    rotate: 5deg;
 }
 
-#staryellow:hover {
-    transform: scale(1.1) rotate(180deg);
+#staryellow img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease;
 }
+
+#staryellow img:hover {
+    transform: rotate(180deg); /* Rotate the image by 180 degrees on hover */
+}
+
+#staryellow a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#staryellow .newmedia-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: comfortaa, sans-serif;
+    font-weight: 700;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#staryellow:hover .newmedia-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+
 
 #logo {
     position: fixed;
@@ -150,8 +244,8 @@ h1 {
     height: auto;
     transform: translate(0, 0);
     z-index: 5;
-  
 }
+
 .logo-container {
     position: relative;
     display: inline-block;
@@ -168,10 +262,8 @@ h1 {
     border-radius: 5px;
     font-family: comfortaa;
     margin-top: 20px;
-    z-index: 10; 
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    z-index: 10;
 }
-
 
 .menu ul {
     list-style-type: none;
@@ -208,5 +300,4 @@ h1 {
     width: 100%;
     height: 100%;
     z-index: 3;
-    /* pointer-events: none; */
 }
