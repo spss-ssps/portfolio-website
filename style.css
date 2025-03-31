@@ -132,6 +132,7 @@ h1 {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
 }
 
 #starpurple:hover .performance-text {
@@ -177,6 +178,7 @@ h1 {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
 }
 
 #stargreen:hover .aboutme-text {
@@ -223,6 +225,7 @@ h1 {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
 }
 
 #starpink:hover .media-text {
@@ -268,6 +271,7 @@ h1 {
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
 }
 
 #staryellow:hover .newmedia-text {
