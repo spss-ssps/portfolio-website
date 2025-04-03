@@ -1,5 +1,5 @@
 body {
-    background-color: #F7F5E8;
+    background-color: #f7f5e8;
     font-family: comfortaa, sans-serif;
 }
 
@@ -65,6 +65,15 @@ body {
     }
 }
 
+#mousetrace {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
 #pisces {
     width: 60vw;
     height: 80vh;
@@ -85,264 +94,61 @@ body {
 
 h1 {
     font-family: comfortaa;
-    font-size: 50px;
+    font-size: 2.8vw;
     color: #000;
     position: fixed;
-    top: 4vh;
-    left: 120px;
+    top: 4.5vh;
+    left: 7vw;
     margin: 0;
     z-index: 5;
     transform: none;
 }
 
-#starpurple {
-    position: absolute;
-    top: 32vh;
-    left: 24.8vw;
-    width: 4%;
-    z-index: 5;
-}
-
-#starpurple img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.8s ease; /* Smooth rotation effect */
-}
-
-#starpurple img:hover {
-    transform: rotate(180deg); /* Rotate the image by 180 degrees on hover */
-}
-
-#starpurple a {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-#starpurple .performance-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-family: comfortaa, sans-serif;
-    font-weight: 700;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    pointer-events: none;
-}
-
-#starpurple:hover .performance-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Green star */
-#stargreen {
-    position: fixed;
-    top: 44.5vh;
-    right: 34vw;
-    width: 4%;
-    z-index: 5;
-}
-
-#stargreen img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.8s ease;
-}
-
-#stargreen img:hover {
-    transform: rotate(180deg); /* Rotate the image by 180 degrees on hover */
-}
-
-#stargreeen a {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-#stargreen .aboutme-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-family: comfortaa, sans-serif;
-    font-weight: 700;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    pointer-events: none;
-}
-
-#stargreen:hover .aboutme-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-/* Pink star */
-#starpink {
-    position: fixed;
-    bottom: 28vh;
-    left: 29vw;
-    width: 4%;
-    z-index: 5;
-}
-
-#starpink img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.8s ease;
-}
-
-#starpink img:hover {
-    transform: rotate(180deg); /* Rotate the image by 180 degrees on hover */
-}
-
-#starpink a {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-#starpink .media-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-family: comfortaa, sans-serif;
-    font-weight: 700;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    pointer-events: none;
-}
-
-#starpink:hover .media-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-/* Yellow star */
-#staryellow {
-    position: fixed;
-    top: 48vh;
-    left: 47vw;
-    width: 4.5%;
-    z-index: 5;
-}
-
-#staryellow img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.8s ease;
-}
-
-#staryellow img:hover {
-    transform: rotate(180deg); /* Rotate the image by 180 degrees on hover */
-}
-
-#staryellow a {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    height: 100%;
-}
-
-#staryellow .newmedia-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(0, 0, 0);
-    font-size: 20px;
-    font-family: comfortaa, sans-serif;
-    font-weight: 700;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
-    pointer-events: none;
-}
-
-#staryellow:hover .newmedia-text {
-    visibility: visible;
-    opacity: 1;
-}
-
-
-
 #logo {
     position: fixed;
     top: 1vh;
     left: 1vw;
-    width: 96px;
+    width: 6vw;
     height: auto;
-    transform: translate(0, 0);
     z-index: 5;
 }
 
-.logo-container {
-    position: relative;
-    display: inline-block;
-}
-
-/* Initially hide the menu */
-.menu {
-    top: 7.5vh;
-    left: 1vw;
-    display: none;
-    position: absolute;
-    background-color: #0e010e71; /* Solid purple color */
-    padding: 10px;
-    border-radius: 5px;
-    font-family: comfortaa;
-    margin-top: 20px;
+/* Style for the header */
+#navbar {
+    position: fixed;
+    top: 5vh;
+    right: 3vw;
+    background-color: #0e010e; /* Solid purple color */
     z-index: 10;
+    padding: 1vh 2vw;
+    border-radius: 0.5vw;
+    font-family: comfortaa;
 }
 
-.menu ul {
+/* Style for the navigation bar */
+#navbar nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    gap: 2vw; /* Space between links */
 }
 
-.menu ul li {
-    margin: 5px 0;
+#navbar nav ul li {
+    display: inline-block;
 }
 
-.menu ul li a {
+#navbar nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 5px 10px;
-    font-family: comfortaa;
+    font-family: comfortaa, sans-serif;
+    font-size: 2vh;
+    font-weight: 700;
+    padding: 0.5vh 1vw;
     display: block;
 }
 
-.menu ul li a:hover {
+#navbar nav ul li a:hover {
     background-color: #a64dff; /* Brighter purple for hover effect */
-    border-radius: 3px;
-}
-
-/* Show the menu when hovering over the logo */
-.logo-container:hover .menu {
-    display: block;
-}
-
-#mousetrace {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
+    border-radius: 0.3vw;
 }

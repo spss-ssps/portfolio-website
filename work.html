@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/.png">
+    <title>sofia pace</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <style>
+    h1 {
+        font-family: comfortaa, sans-serif;
+        font-size: 30px;
+        color: #000;
+        /* Removed the fixed position */
+    }
+
+    .layout {
+        width: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+        gap: 8px;
+    }
+
+    .header { grid-area: header; }
+    .main { grid-area: main; }
+    .footer { grid-area: footer; }
+
+    #mousetrace {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
+    </style>
+
+</head>
+<body>
+
+    <main>
+        <section class="layout">
+            <div class="header">1</div>
+            <div class="main">
+                <!-- Move <h1> here -->
+                <h1>performance</h1>
+                <!-- You can add more content here -->
+                <div>2</div>
+            </div>
+            <div class="footer">3</div>
+        </section>
+    </main>
+
+    <canvas id="mousetrace"></canvas>
+    
+    <script src="mousetrace.js"></script>
+</body>
+</html>
