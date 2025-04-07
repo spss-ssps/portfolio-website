@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/.png">
+    <link rel="shortcut icon" href="src/starpurple.png">
     <title>sofia pace</title>
 
     <!-- Google Fonts -->
@@ -11,11 +11,43 @@
 
     <!-- CSS -->
     <style>
+    body {
+        margin: 0;
+        font-family: comfortaa, sans-serif;
+        background-color: #ffffff;
+    }
+    #mousetrace {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+    }
     h1 {
         font-family: comfortaa, sans-serif;
-        font-size: 30px;
+        font-size: 2.8vw;
         color: #000;
-        /* Removed the fixed position */
+        margin-left: 10px;
+    }
+
+    h2 {
+        font-family: comfortaa, sans-serif;
+        font-size: 20px;
+        color: #000;
+        margin-left: 10px;
+    }
+
+    .header {
+        padding: 10px 16px;
+        background: #f7f5e8;
+        color: #f7f5e8;
+        display: flex;
+        align-items: center;
+    }
+
+    .header img {
+        height: 6vw;
     }
 
     .layout {
@@ -29,17 +61,75 @@
         gap: 8px;
     }
 
+    nav {
+    position: fixed;
+    top: 6vh;
+    right: 3vw;
+    z-index: 10;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        margin-right: 1.5vw;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-family: comfortaa, sans-serif;
+        font-size: 2vh;
+        padding: 0.5vh 1vw;
+        transition: all 0.3s ease;
+    }
+
+    /* #current-page {
+        text-decoration: none;
+        color: #a64dff;
+        font-weight: bold;
+        font-family: comfortaa, sans-serif;
+        font-size: 2vh;
+        padding: 0.5vh 1vw;
+        transition: all 0.3s ease;
+        z-index: 11;
+    } */
+
+    nav ul li a:hover {
+        background-color: #a64dff;
+        color: white;
+    }
+
     .header { grid-area: header; }
     .main { grid-area: main; }
     .footer { grid-area: footer; }
 
-    #mousetrace {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 3;
+    .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    }
+
+    .sticky + .content {
+    padding-top: 102px;
+    }
+    .content {
+        padding: 20px;
+        background-color: #f7f5e8;
+        color: #000;
+        font-family: comfortaa, sans-serif;
+        font-size: 1.2vw;
+        line-height: 1.5;
     }
     </style>
 
@@ -48,12 +138,35 @@
 
     <main>
         <section class="layout">
-            <div class="header">1</div>
+            <div class="header" id="header">
+                <nav>
+					<ul>
+						<li><a href="index.html">home</a></li>
+                        <li><a href="work.html" class="current-page">work</a></li>
+						<li><a href="aboutme.html">about me</a></li>
+						<li><a href="#contact">contact</a></li>
+					</ul>
+				</nav>
+                <a href="index.html">
+                    <img src="src/mainlogo.png" id="logo" alt="round lines that interlock with each other">
+                </a>                
+                <h1>sofia pace</h1>
+              </div>
             <div class="main">
-                <!-- Move <h1> here -->
-                <h1>performance</h1>
-                <!-- You can add more content here -->
-                <div>2</div>
+                <h2>performance</h2>
+                <div class="content">
+                    <h3>On Scroll Sticky Header</h3>
+                    <p>The header will stick to the top when you reach its scroll position.</p>
+                    <p>Scroll back up to remove the sticky effect.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                    <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+                  </div>
             </div>
             <div class="footer">3</div>
         </section>
@@ -62,5 +175,7 @@
     <canvas id="mousetrace"></canvas>
     
     <script src="mousetrace.js"></script>
+    <script src="header.js"></script>
 </body>
 </html>
+

@@ -12,56 +12,38 @@ body {
     body {
         font-size: 14px;
     }
-    
 
     h1 {
         font-size: 24px;
         left: 10px;
         position: relative;
     }
-    
-    #pisces {
-        width: 100vw;
-        height: 40vh;
-    }
-    
-    #starpurple, #stargreen, #starpink, #staryellow {
-        width: 10%;
-        top: auto;
-        bottom: auto;
-        left: auto;
-        right: auto;
-    }
-
-    #starpurple {
-        top: 20vh;
-        left: 20vw;
-    }
-    
-    #stargreen {
-        top: 40vh;
-        right: 10vw;
-    }
-    
-    #starpink {
-        bottom: 10vh;
-        left: 15vw;
-    }
-    
-    #staryellow {
-        top: 30vh;
-        left: 35vw;
-    }
 
     #logo {
         width: 72px; /* Scale down logo on mobile */
     }
 
-    /* Adjust menu for mobile */
-    .menu {
-        font-size: 14px;
-        top: 10vh;
-        left: 5vw;
+    /* Adjust navigation for mobile */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li {
+        margin-right: 0; /* Reset margin for mobile */
+    }
+
+    .header {
+        flex-direction: column; /* Stack the header items */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -77,7 +59,6 @@ body {
 #pisces {
     width: 60vw;
     height: 80vh;
-    background-size: cover;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -87,68 +68,86 @@ body {
 }
 
 #pisces img {
-    width: 100%; 
+    width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
-h1 {
-    font-family: comfortaa;
+.layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 16px;
+    position: fixed;
+    top: 0;
+    left: 0vw;
+    z-index: 10;
+}
+
+.header-left {
+    background: #f7f5e8;
+    color: #f7f5e8;
+    display: flex;
+    align-items: center;
+}
+
+.header-left img { 
+    height: 6vw;
+}
+
+
+.header-left h1 {
+    font-family: comfortaa, sans-serif;
     font-size: 2.8vw;
     color: #000;
-    position: fixed;
-    top: 4.5vh;
-    left: 7vw;
-    margin: 0;
-    z-index: 5;
-    transform: none;
+    margin-left: 10px;
 }
 
-#logo {
-    position: fixed;
-    top: 1vh;
-    left: 1vw;
-    width: 6vw;
-    height: auto;
-    z-index: 5;
-}
 
-/* Style for the header */
-#navbar {
+nav {
     position: fixed;
-    top: 5vh;
+    top: 6vh;
     right: 3vw;
-    background-color: #0e010e; /* Solid purple color */
     z-index: 10;
-    padding: 1vh 2vw;
-    border-radius: 0.5vw;
-    font-family: comfortaa;
 }
 
-/* Style for the navigation bar */
-#navbar nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+nav ul {
     display: flex;
-    gap: 2vw; /* Space between links */
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-#navbar nav ul li {
-    display: inline-block;
+nav ul li {
+    margin-right: 1.5vw;
 }
 
-#navbar nav ul li a {
-    color: white;
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
     text-decoration: none;
+    color: black;
+    font-weight: bold;
     font-family: comfortaa, sans-serif;
     font-size: 2vh;
-    font-weight: 700;
     padding: 0.5vh 1vw;
-    display: block;
+    transition: all 0.3s ease;
 }
 
-#navbar nav ul li a:hover {
-    background-color: #a64dff; /* Brighter purple for hover effect */
-    border-radius: 0.3vw;
+nav ul li a:hover {
+    background-color: #a64dff;
+    color: white;
 }
