@@ -152,11 +152,11 @@
 }
 
 #stargreen img:hover {
-    transform: rotate(180deg);s
+    transform: rotate(180deg);
 }
 
 #stargreeen a {
-    position: relative ;
+    position: relative;
     display: inline-block;
     width: 100%;
     height: 100%;
