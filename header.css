@@ -1,3 +1,8 @@
+body {
+    margin: 0;
+    font-family: comfortaa, sans-serif;
+}
+
 .header {
     font-family: comfortaa, sans-serif;
     font-size: 1.9vw;
