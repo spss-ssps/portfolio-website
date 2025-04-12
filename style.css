@@ -6,7 +6,7 @@ body {
 @font-face {
     font-family: comfortaa;
     /* src: url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
-    src: url(src/Comfortaa-VariableFont_wght.ttf);
+    src: url(src/Comfortaa-VariableFont_wght.ttf) format('truetype');;
 }
 
 @media (max-width: 768px) {
