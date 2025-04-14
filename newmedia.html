@@ -6,6 +6,49 @@
     <link rel="shortcut icon" href="src/icon.png">
     <title>sofia pace</title>
     <link rel="stylesheet" type="text/css" href="header.css">
+    <style>
+
+.container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+/* Left Panel */
+.content {
+  flex: 0.6;
+  margin-left: 2vw;
+}
+
+/* Right Panel */
+.thumbnail-nav {
+  flex: 1;
+  margin-right: 2vw;
+}
+
+/* .thumbnail-nav h2 span {
+  background: yellow;
+  padding: 0.2em 0.4em;
+} */
+
+/* Grid layout for thumbnails */
+.thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.thumb {
+  background: rgb(255, 255, 255);
+  height: 100px;
+}
+
+.thumb.tall {
+  height: 220px;
+}
+
+    </style>
     </head>
 <body>
     <main>
@@ -35,16 +78,44 @@
             <div class="main">
                 <div style="display: flex; align-items: center;">
                     <h2>new media</h2>
-                    <img src="src/starpurple.png" style="height: 2vw; margin-left: 10px;">
+                    <img src="src/staryellow.png" style="height: 2vw; margin-left: 10px;">
+                    
                 </div>
-                <div class="content">
-                    <h3></h3>
-                  </div>
-            </div>
+                <!-- <div class="content">
+                    <h3></h3> -->
+
+                    <div class="container">
+    
+                        <!-- Right Thumbnail Nav -->
+                        <div class="thumbnail-nav">
+                          <!-- <h2><span>Thumb Nav Right</span></h2> -->
+                          <div class="thumb-grid">
+                            <div class="thumb tall">
+                            <!-- Left Content -->
+                            <div class="content" id="thumbnail1-content" style="display: none;">
+                                <h3>something</h3>
+                                <p>
+                                Vestibulum et dignissim magna. Nullam et ultrices felis. Suspendisse facilisis sagittis sem...
+                                </p>
+                            </div>
+                            </div>
+                            <div class="thumb tall"></div>
+                            <div class="thumb tall"></div>
+                            <div class="thumb tall"></div>
+                            <div class="thumb tall"></div>
+                          </div>
+                        </div>
+                      </div>
+                  <!-- </div>
+            </div> -->
             <div class="footer">3</div>
         </section>
     </main>
+
+    <canvas id="mousetrace"></canvas>
+
 </body>
     <script src="js/mousetrace.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/gallery.js"></script>
 </html>
