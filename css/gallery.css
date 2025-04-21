@@ -8,7 +8,6 @@ body {
   .main {
     background-color: #f7f5e8;
     padding: 2rem;
-    position: relative; /* Ensure it doesn't affect the canvas positioning */
   }
   
   h2 span {
@@ -31,7 +30,6 @@ h2 span:hover {
     width: 3%;
     /* z-index: 1001; */
     transition: transform 0.8s ease;
-    position: relative; /* Add this */
   }
   
   #gallerystar:hover{
@@ -48,14 +46,14 @@ h2 span:hover {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 3rem;
     margin-top: 2rem;
-    max-width: 1000px;
+    max-width: 2000px;
     margin-left: auto;
     margin-right: auto;
   }
   
   .thumb {
     background-color: white;
-    aspect-ratio: 1 / 1; /* Keeps square shape */
+    aspect-ratio: 2 / 1; /* Keeps square shape */
     overflow: hidden;
     border: 1px solid #000;
     transition: transform 0.2s ease, border-color 0.2s ease;
@@ -80,28 +78,39 @@ h2 span:hover {
   .side-panel {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: 600px;
-    height: 100%;
+    right: 0;
+    width: 40vw;
+    height: 100vh;
     background-color: white;
-    box-shadow: -4px 0 10px rgba(0,0,0,0.1);
-    transition: right 0.3s ease;
-    padding: 2rem;
-    overflow-y: auto;
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
     z-index: 999;
+    overflow-y: auto;
+    padding: 20px;
+  
+    transform: translateX(100%); /* Hides it */
+    transition: transform 0.3s ease;
   }
   
   .side-panel.open {
-    right: 0;
+    transform: translateX(0); /* Shows it */
   }
   
-  .panel-content button {
+    .panel-content button {
     background: black;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
+    width: 3vw;
+    height: 3vw;
+    min-width: 30px;
+    min-height: 30px;
     margin-bottom: 1rem;
     cursor: pointer;
-    border-radius: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    .panel-content button:hover {
+    background: #a64dff;
   }
   

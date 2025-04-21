@@ -1,0 +1,39 @@
+/* Responsive design - scaling for smaller screens */
+@media (max-width: 768px) {
+    .floating-layout {
+        transform: scale(0.8);
+        transform-origin: top center;
+    }
+
+    #starpurple {
+        top: 25vh;
+        left: 20vw;
+    }
+
+    #starpink {
+        bottom: 20vh;
+        left: 25vw;
+    }
+
+    #staryellow {
+        top: 40vh;
+        left: 40vw;
+    }
+
+    #stargreen {
+        top: 40vh;
+        right: 30vw;
+    }
+
+    #pisces {
+        width: 70vw;
+        height: 70vh;
+    }
+
+    #starpurple .performance-text,
+    #starpink .media-text,
+    #staryellow .newmedia-text,
+    #stargreen .design-text {
+        font-size: 3vw;
+    }
+}
