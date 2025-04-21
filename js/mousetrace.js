@@ -14,11 +14,17 @@ mousetrace.height = window.innerHeight;
 window.addEventListener('resize', () => {
     mousetrace.width = window.innerWidth;
     mousetrace.height = window.innerHeight;
+
+    // Debug: Log to see if canvas size is updating correctly
+    console.log(`Canvas resized: ${mousetrace.width} x ${mousetrace.height}`);
 });
 
+// Adjust mouse position based on canvas's position in the viewport
 mousetrace.addEventListener('mousemove', (event) => {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
+    // Get canvas position relative to the viewport
+    const rect = mousetrace.getBoundingClientRect();
+    mouseX = event.clientX - rect.left; // Adjust mouse X position
+    mouseY = event.clientY - rect.top;  // Adjust mouse Y position
     
     // Only add a new circle every 50ms for better spacing
     const currentTime = Date.now();
@@ -28,7 +34,7 @@ mousetrace.addEventListener('mousemove', (event) => {
             y: mouseY,
             alpha: 0.8,
             size: Math.random() * 5 + 3,
-            color: `rgb(${Math.floor(Math.random()*156)+100}, ${Math.floor(Math.random()*156)+100}, ${Math.floor(Math.random()*156)+100})` // Random color between 100-255
+            color: `rgb(${Math.floor(Math.random() * 156) + 100}, ${Math.floor(Math.random() * 156) + 100}, ${Math.floor(Math.random() * 156) + 100})` // Random color between 100-255
         });
         lastAddedTime = currentTime;
     }

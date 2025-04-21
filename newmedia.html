@@ -5,110 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="src/icon.png">
     <title>sofia pace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Comfortaa:wght@300..700&family=Didact+Gothic&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="header.css">
-    <style>
-
-.container {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-/* Left Panel */
-.content {
-  flex: 0.6;
-  margin-left: 2vw;
-}
-
-/* Right Panel */
-.thumbnail-nav {
-  flex: 1;
-  margin-right: 2vw;
-}
-
-/* .thumbnail-nav h2 span {
-  background: yellow;
-  padding: 0.2em 0.4em;
-} */
-
-/* Grid layout for thumbnails */
-.thumb-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.thumb {
-  background: rgb(255, 255, 255);
-  height: 100px;
-}
-
-.thumb.tall {
-  height: 220px;
-}
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="gallery.css">
     </head>
 <body>
     <main>
-        <section class="layout">
-            <div class="header" id="header">
-                <nav>
-					<ul>
-                        <li><a href="index.html">home</a></li>
-                        <li class="dropdown">
-                            <a class="current-page">work</a>
-                            <div class="dropdown-content">
-                                <a href="performance.html">performance</a>
-                                <a href="media.html">media</a>
-                                <a href="newmedia.html">new media</a>
-                                <a href="design.html">design</a>
-                            </div>
-                        </li>
-						<li><a href="aboutme.html">about me</a></li>
-						<li><a href="#contact">contact</a></li>
-					</ul>
-				</nav>
-                <a href="index.html">
-                    <img src="src/mainlogo.png" id="logo" alt="round lines that interlock with each other">
-                </a>                
-                <a href="index.html" style="text-decoration: none; color: black;"><h1 style="color: black;">sofia pace</h1></a>
-              </div>
-            <div class="main">
-                <div style="display: flex; align-items: center;">
-                    <h2>new media</h2>
-                    <img src="src/staryellow.png" style="height: 2vw; margin-left: 10px;">
-                    
+      <section class="layout">
+        <!-- Header -->
+        <div class="header">
+          <div class="logo-title">
+            <a href="index.html">
+              <img src="src/mainlogo.png" id="logo" alt="round lines that interlock" />
+            </a>
+            <a href="index.html" style="text-decoration: none;">
+              <h1>sofia pace</h1>
+            </a>
+          </div>
+          <nav>
+            <ul>
+              <li><a href="index.html">home</a></li>
+              <li class="dropdown">
+                <a class="current-page">work</a>
+                <div class="dropdown-content">
+                  <a href="performance.html">performance</a>
+                  <a href="media.html">media</a>
+                  <a href="newmedia.html">new media</a>
+                  <a href="design.html">design</a>
                 </div>
-                <!-- <div class="content">
-                    <h3></h3> -->
-
-                    <div class="container">
-    
-                        <!-- Right Thumbnail Nav -->
-                        <div class="thumbnail-nav">
-                          <!-- <h2><span>Thumb Nav Right</span></h2> -->
-                          <div class="thumb-grid">
-                            <div class="thumb tall">
-                            <!-- Left Content -->
-                            <div class="content" id="thumbnail1-content" style="display: none;">
-                                <h3>something</h3>
-                                <p>
-                                Vestibulum et dignissim magna. Nullam et ultrices felis. Suspendisse facilisis sagittis sem...
-                                </p>
-                            </div>
-                            </div>
-                            <div class="thumb tall"></div>
-                            <div class="thumb tall"></div>
-                            <div class="thumb tall"></div>
-                            <div class="thumb tall"></div>
-                          </div>
-                        </div>
-                      </div>
-                  <!-- </div>
-            </div> -->
-            <div class="footer">3</div>
+              </li>
+              <li><a href="aboutme.html">about me</a></li>
+              <li><a href="#contact">contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        
+        
+        
+  
+        <!-- Main Gallery -->
+        <div class="main">
+          <div class="media-gallery">
+            <h2><span>new media</span></h2>
+            <img src="src/staryellow.png" id="gallerystar"/>
+            <p>algo algo algo</p>
+  
+            <div class="thumbnail-grid">
+              <div class="thumb" data-id="1"><img src="work/photo3.jpg" alt="Artwork 1"></div>
+              <div class="thumb" data-id="2"><img src="work/anatomic.gif" alt="Artwork 2"></div>
+              <div class="thumb" data-id="3"><img src="work/varela.gif" alt="Artwork 3"></div>
+            </div>  
+            
+  
+            <div class="side-panel" id="sidePanel">
+              <div class="panel-content">
+                <button id="closePanel">X</button>
+                <h2>Page Content</h2>
+                <p>This is more detail about the selected piece.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Footer -->
+        <div class="footer">3</div>
         </section>
     </main>
 

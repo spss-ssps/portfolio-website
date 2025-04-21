@@ -5,49 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="src/icon.png">
     <title>sofia pace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Comfortaa:wght@300..700&family=Didact+Gothic&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="header.css">
-    </head>
+    <link rel="stylesheet" type="text/css" href="gallery.css">
+
+</head>
 <body>
+
     <main>
         <section class="layout">
-            <div class="header" id="header">
-                <nav>
-					<ul>
-                        <li><a href="index.html">home</a></li>
-                        <li class="dropdown">
-                            <a class="current-page">work</a>
-                            <div class="dropdown-content">
-                                <a href="performance.html">performance</a>
-                                <a href="media.html">media</a>
-                                <a href="newmedia.html">new media</a>
-                                <a href="design.html">design</a>
-                            </div>
-                        </li>
-						<li><a href="aboutme.html">about me</a></li>
-						<li><a href="#contact">contact</a></li>
-					</ul>
-				</nav>
-                <a href="index.html">
-                    <img src="src/mainlogo.png" id="logo" alt="round lines that interlock with each other">
-                </a>                
-                <a href="index.html" style="text-decoration: none; color: black;"><h1 style="color: black;">sofia pace</h1></a>
-              </div>
-            <div class="main">
-                <div style="display: flex; align-items: center;">
-                    <h2>design</h2>
-                    <img src="src/stargreen.png" style="height: 2vw; margin-left: 10px;">
-                </div>
-                <div class="content">
-                    <h3></h3>
+
+                <!-- Header -->
+                <div class="header">
+                  <div class="logo-title">
+                    <a href="index.html">
+                      <img src="src/mainlogo.png" id="logo" alt="round lines that interlock" />
+                    </a>
+                    <a href="index.html" style="text-decoration: none;">
+                      <h1>sofia pace</h1>
+                    </a>
                   </div>
-            </div>
-            <div class="footer">3</div>
-        </section>
-    </main>
+                  <nav>
+                    <ul>
+                      <li><a href="index.html">home</a></li>
+                      <li class="dropdown">
+                        <a class="current-page">work</a>
+                        <div class="dropdown-content">                        
+                          <a href="performance.html">performance</a>
+                          <a href="media.html">media</a>
+                          <a href="newmedia.html">new media</a>
+                          <a href="design.html">design</a>
+                        </div>
+                      </li>
+                      <li><a href="aboutme.html">about me</a></li>
+                      <li><a href="#contact">contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                
+                
+                
+          
+                <!-- Main Gallery -->
+                <div class="main">
+                  <div class="media-gallery">
+                    <h2><span>design</span></h2>
+                    <img src="src/stargreen.png" id="gallerystar"/>
+                    <p>algo algo algo</p>
+          
+                    <div class="thumbnail-grid">
+                        <div class="thumb" data-id="1"><img src="work/photo3.jpg" alt="Artwork 1"></div>
+                        <div class="thumb" data-id="2"><img src="work/anatomic.gif" alt="Artwork 2"></div>
+                        <div class="thumb" data-id="3"><img src="work/varela.gif" alt="Artwork 3"></div>
+                      </div>  
+          
+                    <div class="side-panel" id="sidePanel">
+                      <div class="panel-content">
+                        <button id="closePanel">X</button>
+                        <h2>Page Content</h2>
+                        <p>This is more detail about the selected piece.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          
+                <!-- Footer -->
+                <div class="footer">3</div>
+              </section>
+            </main>
+          
 
     <canvas id="mousetrace"></canvas>
-
-</body>
+    
     <script src="js/mousetrace.js"></script>
     <script src="js/header.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
 </html>
+

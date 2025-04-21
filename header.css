@@ -1,80 +1,53 @@
-body {
-    margin: 0;
-    font-family: comfortaa, sans-serif;
-}
-
 .header {
-    font-family: comfortaa, sans-serif;
-    font-size: 1.9vw;
-    color: #000;
-    margin-left: 0.1vw;
-    padding: 10px 16px;
+    font-family: Comfortaa, sans-serif;
+    position: sticky;
+    top: 0;
     background: #f7f5e8;
-    color: #f7f5e8;
     display: flex;
     align-items: center;
-    z-index: 10;
-}
-h1 {
-    margin-left: 0.8vw;
-}
-.header img {
-    height: 11vh;
-    left: 3vw;
-}
+    justify-content: space-between;
+    padding: 10px 2vw;
+    z-index: 998;
 
-.main {
-    background-color: #f7f5e8;
-    }
-
-.main h2 {
-    font-family: comfortaa, sans-serif;
-    font-size: 2vw;
-    color: #000;
-    margin-left: 45vw;
-    padding: 10px 16px;
-    border: #000000 solid 1px;
-    border-radius: 5px;
-}
-.layout {
-    width: 100%;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-    gap: 8px;
-}
-
-.header { grid-area: header; }
-.main { grid-area: main; }
-.footer { grid-area: footer; }
-
-nav {
-position: fixed;
-top: 6vh;
-right: 3vw;
-z-index: 10;
-}
-
-nav ul {
+  }
+  
+  .logo-title {
     display: flex;
-    justify-content: flex-end;
-    list-style-type: none;
-    padding: 0;
+    align-items: center;
+    gap: 1vw;
+    text-decoration: none;
+  }
+  
+  .logo-title h1 {
     margin: 0;
-}
-
-nav ul li {
-    margin-right: 1.5vw;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
-}
-
-nav ul li a {
+    font-size: 3vw;
+    color: black;
+  }
+  
+  .header img {
+    height: 11vh;
+  }
+  
+  
+  h1 {
+    margin-left: 1vw;
+    color: black;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 1.5vw;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li a {
     text-decoration: none;
     color: black;
     font-weight: bold;
@@ -82,85 +55,62 @@ nav ul li a {
     font-size: 2vh;
     padding: 0.5vh 1vw;
     transition: all 0.3s ease;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     background-color: #a64dff;
     color: white;
-}
-
-.sticky {
-position: fixed;
-top: 0;
-width: 100%;
-}
-
-.sticky + .content {
-padding-top: 200px;
-}
-
-.content {
-    padding: 20px 20px;
-    background-color: #f7f5e8;
-    color: #000;
-    font-family: comfortaa, sans-serif;
-    font-size: 1.2vw;
-    line-height: 1.5;
-}
-
-/* current page */
-.current-page {
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #a64dff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1001;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
     text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #000;
+  }
+
+.current-page {
     color: #a64dff;
-    font-weight: bold;
-    font-family: comfortaa, sans-serif;
-    font-size: 2vh;
-    padding: 0.5vh 1vw;
-    transition: all 0.3s ease;
-    z-index: 11;
+    font-weight: bold
 }
 
-
-.dropdown {
-position: relative;
-display: inline-block;
-}
-
-.dropdown-content {
-display: none;
-position: absolute;
-background-color: #a64dff;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-}
-
-/* Style the dropdown links */
-.dropdown-content a {
-color: rgb(255, 255, 255);
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-text-align: left;
-}
-
-/* Change color on hover */
-.dropdown-content a:hover {
-background-color: #f1f1f1;
-color: #000;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-display: block;
-}
-
-/* mousetrace */
-#mousetrace {
+#mouseTrace {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 3;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  
+.small-icon {
+    width: 20px; 
+    height: 20px; 
+    vertical-align: middle
 }

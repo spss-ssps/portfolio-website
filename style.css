@@ -3,12 +3,6 @@ body {
     font-family: comfortaa, sans-serif;
 }
 
-@font-face {
-    font-family: comfortaa;
-    /* src: url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
-    src: url(src/Comfortaa-VariableFont_wght.ttf) format('truetype');;
-}
-
 .header{
     position: fixed;
 }
