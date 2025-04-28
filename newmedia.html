@@ -1,85 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/icon.png">
-    <title>sofia pace</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="src/icon.png">
+  <title>sofia pace</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Comfortaa:wght@300..700&family=Didact+Gothic&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Comfortaa:wght@300..700&family=Didact+Gothic&display=swap"
+    rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="css/header.css">
-    <link rel="stylesheet" type="text/css" href="css/gallery.css">
-    </head>
+  <link rel="stylesheet" type="text/css" href="css/header.css">
+  <link rel="stylesheet" type="text/css" href="css/gallery.css">
+</head>
+
 <body>
-    <main>
-      <section class="layout">
-        <!-- Header -->
-        <div class="header">
-          <div class="logo-title">
-            <a href="index.html">
-              <img src="src/mainlogo.png" id="logo" alt="round lines that interlock" />
-            </a>
-            <a href="index.html" style="text-decoration: none;">
-              <h1>sofia pace</h1>
-            </a>
-          </div>
-          <nav>
-            <ul>
-              <li><a href="index.html">home</a></li>
-              <li class="dropdown">
-                <a class="current-page">work</a>
-                <div class="dropdown-content">
-                  <a href="performance.html">performance</a>
-                  <a href="media.html">media</a>
-                  <a href="newmedia.html">new media</a>
-                  <a href="design.html">design</a>
-                </div>
-              </li>
-              <li><a href="aboutme.html">about me</a></li>
-              <li><a href="#contact">contact</a></li>
-            </ul>
-          </nav>
+  <main>
+    <section class="layout">
+      <!-- Header -->
+      <div class="header">
+        <div class="logo-title">
+          <a href="index.html">
+            <img src="src/mainlogo.png" id="logo" alt="round lines that interlock" />
+          </a>
+          <a href="index.html" style="text-decoration: none;">
+            <h1>sofia pace</h1>
+          </a>
         </div>
-        
-        
-        
-  
-        <!-- Main Gallery -->
-        <div class="main">
-          <div class="media-gallery">
-            <h2><span>new media</span></h2>
-            <img src="src/staryellow.png" id="gallerystar"/>
-            <p>algo algo algo</p>
-  
-            <div class="thumbnail-grid">
-              <div class="thumb" data-id="1"><img src="work/photo3.jpg" alt="Artwork 1"></div>
-              <div class="thumb" data-id="2"><img src="work/anatomic.gif" alt="Artwork 2"></div>
-              <div class="thumb" data-id="3"><img src="work/varela.gif" alt="Artwork 3"></div>
-            </div>  
-            
-  
-            <div class="side-panel" id="sidePanel">
-              <div class="panel-content">
-                <button id="closePanel">X</button>
-                <h2>Page Content</h2>
-                <p>This is more detail about the selected piece.</p>
+        <nav>
+          <ul>
+            <!-- <li><a href="index.html">home</a></li> -->
+            <li class="dropdown">
+              <a class="current-page">work</a>
+              <div class="dropdown-content">
+                <a href="performance.html">performance</a>
+                <a href="media.html">media</a>
+                <a href="newmedia.html">new media</a>
+                <a href="design.html">design</a>
               </div>
+            </li>
+            <li><a href="aboutme.html">about me</a></li>
+            <li class="dropdown">
+              <a>contact</a>
+              <div class="dropdown-content">
+								<a href="https://www.instagram.com/sofias.space/" target="_blank">instagram</a>
+								<a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank">linkdin</a>
+								<a href="https://vimeo.com/sofiasspace" target="_blank">vimeo</a>
+								<!-- <a href="">email</a> -->
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+
+
+
+      <!-- Main Gallery -->
+      <div class="main">
+        <div class="media-gallery">
+          <h2><span>new media</span></h2>
+          <img src="src/staryellow.png" id="gallerystar" />
+          <p><span>algo algo algo</span></p>
+
+          <div class="thumbnail-grid">
+            <div class="thumb" data-id="5"><img src="work/photo3.jpg" alt="Artwork 1"></div>
+            <div class="thumb" data-id="6"><img src="work/anatomic.gif" alt="Artwork 2"></div>
+          </div>
+
+
+          <div class="side-panel" id="sidePanel">
+            <div class="panel-content">
+              <button id="closePanel">X</button>
+              <h2>Page Content</h2>
+              <p>date</p>
+              <h3>This is more detail about the selected piece.</h3>
             </div>
           </div>
         </div>
-  
-        <!-- Footer -->
-        <div class="footer">3</div>
-        </section>
-    </main>
+      </div>
 
-    <canvas id="mousetrace"></canvas>
+      <!-- Footer -->
+      <div class="footer">3</div>
+    </section>
+  </main>
+
+  <canvas id="mousetrace"></canvas>
 
 </body>
-    <script src="js/mousetrace.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/gallery.js"></script>
+<script src="js/mousetrace.js"></script>
+<script src="js/header.js"></script>
+<script src="js/gallery.js"></script>
+
 </html>

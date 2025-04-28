@@ -1,33 +1,45 @@
 /* Responsive design - scaling for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    body {
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: hidden; /* Prevent vertical scrolling if desired */
+    }
+
     .floating-layout {
         transform: scale(0.8);
         transform-origin: top center;
+        width: 150vw; /* Make the layout wider than the viewport */
+        position: relative;
     }
 
+    #pisces {
+        width: 150vw; /* Make image wider than viewport */
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+
+    /* Adjust other elements to fit within this wider layout */
     #starpurple {
-        top: 25vh;
-        left: 20vw;
+        top: 43.5vh;
+        left: 30vw;
     }
 
     #starpink {
         bottom: 20vh;
-        left: 25vw;
+        left: 45vw;
     }
 
     #staryellow {
         top: 40vh;
-        left: 40vw;
+        left: 70vw;
     }
 
     #stargreen {
         top: 40vh;
         right: 30vw;
-    }
-
-    #pisces {
-        width: 70vw;
-        height: 70vh;
     }
 
     #starpurple .performance-text,

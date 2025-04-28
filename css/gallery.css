@@ -9,6 +9,15 @@ body {
     background-color: #f7f5e8;
     padding: 2rem;
   }
+
+  .layout {
+    transition: margin-right 0.5s ease; /* smooth shift */
+  }
+  
+  /* When side panel is open, shift layout */
+  .layout.shifted {
+    margin-right: 40vw; /* same width as side panel */
+  }
   
   h2 span {
     font-size: 2vw;
@@ -19,11 +28,29 @@ body {
     transition: letter-spacing 0.3s ease, transform 0.3s ease;
   }
 
-h2 span:hover {
-    letter-spacing: 8px;
-    transform: translateY(-2px);
-    font-style: italic;
-}
+  h2 span:hover {
+      letter-spacing: 8px;
+      transform: translateY(-2px);
+      font-style: italic;
+  }
+
+  p span{
+    font-size: 1vw;
+  }
+
+  h2{
+    font-size: 1.8vw;
+  }
+  
+  p{
+    font-size: 0.6vw;
+  }
+
+  h3{
+    font-size: 0.9vw;
+    font-family: "Space Mono", monospace;
+    font-weight: 100;
+  }
 
   #gallerystar {
     width: 3%;
@@ -94,6 +121,21 @@ h2 span:hover {
     transform: translateX(0); /* Shows it */
   }
   
+  /* Side panel content alignment */
+  .panel-content {
+    text-align: right;  /* Aligns all text to the right */
+    padding: 20px;
+  }
+
+  .panel-content h2,
+  .panel-content p {
+    text-align: center;
+  }
+
+  .panel-content h3{
+    text-align: left;
+  }
+
     .panel-content button {
     background: black;
     color: white;
@@ -113,3 +155,14 @@ h2 span:hover {
     background: #a64dff;
   }
   
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: clamp(0.8rem, 1vw, 1rem); /* Responsive font size */
+  }
