@@ -25,7 +25,7 @@ mousetrace.addEventListener('mousemove', (event) => {
     const rect = mousetrace.getBoundingClientRect();
     mouseX = event.clientX - rect.left; // Adjust mouse X position
     mouseY = event.clientY - rect.top;  // Adjust mouse Y position
-    
+
     // Only add a new circle every 50ms for better spacing
     const currentTime = Date.now();
     if (currentTime - lastAddedTime > 50) {
@@ -50,7 +50,7 @@ function draw() {
         ctx.beginPath();
         ctx.arc(circle.x, circle.y, circle.size, 0, Math.PI * 2);
         ctx.fill();
-        
+
         circle.alpha -= 0.01; // Fade out the circles
         if (circle.alpha <= 0) {
             circles.splice(i, 1); // Remove the circle once it's completely faded
