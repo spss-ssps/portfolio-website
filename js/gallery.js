@@ -4,9 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
   if (thumbnailGrid) {
     const thumbCount = thumbnailGrid.querySelectorAll('.thumb').length;
 
-    if (thumbCount <= 2) {
-      // Apply size restrictions for small number of thumbnails
-      thumbnailGrid.style.maxWidth = thumbCount === 1 ? '700px' : '1200px';
+    // Add appropriate classes rather than inline styles
+    if (thumbCount === 1) {
+      thumbnailGrid.classList.add('single-item');
+    } else if (thumbCount === 2) {
+      thumbnailGrid.classList.add('two-items');
+    } else {
+      thumbnailGrid.classList.add('multi-item');
     }
   }
 
@@ -29,10 +33,12 @@ document.addEventListener('DOMContentLoaded', function () {
     2: {
       title: "corporeal lines",
       date: "2021",
+      description: "photographical depictions of moving bodies through light.",
       mediaType: "image",
-      mediaId: "", // Path to image
-      description: "photographical depictions of moving bodies through light."
+      mediaId: "work/photo3.jpg", // Main image
+      additionalImages: ["work/photo1.jpg", "work/photo2.jpg", "work/photo4.jpg", "work/photo5.jpg"], // Additional imagese
     },
+
     3: {
       title: "la muerte se escribe sola",
       date: "2023",
@@ -54,8 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
       title: "chromadance",
       date: "2024",
       mediaType: "image",
-      mediaId: "",
-      description: "A looping GIF exploring the internal structures of a human body."
+      mediaId: "<",
+      description: "An audiovisual experience where individuals are encouraged to connect more deeply with their senses through movement. The abstracted kinetic visual expression of the installation invites inner self into the outer world. Our user experience is one where the dancer is able to feel synchronization between what they see, hear, and feel. Through achieving this mind-body-spirit harmony, users can relax and unplug from the hustle of daily life."
     },
 
     5: {
@@ -70,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     7: {
       title: "fabrication projects",
       date: "2025",
-      description: "A dreamy photograph capturing the fading pink light over the ocean."
+      description: "For these projects, I wanted to explore cosmic and celestial shapes and forms, with an experimental approach to more popular interpretations of these concepts. I’m particularly drawn to organic flowing shapes and dream-like aesthetics. By framing this as both a focused and open-ended prompt, I aimed to expand my possibilities in terms of materials and fabrication practices."
     },
 
   };
