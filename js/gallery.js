@@ -46,13 +46,21 @@ document.addEventListener('DOMContentLoaded', function () {
       date: "2023",
       mediaType: "vimeo",
       mediaId: "705201149",
-      description: "A looping GIF exploring the internal structures of a human body."
+      description: "dance video/animation project"
     },
 
     //new media
+    6: {
+      title: "chromadance",
+      date: "2024",
+      mediaType: "image",
+      mediaId: "",
+      description: "A looping GIF exploring the internal structures of a human body."
+    },
+
     5: {
-      title: "anatomic composition",
-      date: "2022",
+      title: "something something",
+      date: "2025",
       mediaType: "image",
       mediaId: "",
       description: "A looping GIF exploring the internal structures of a human body."
