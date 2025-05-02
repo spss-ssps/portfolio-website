@@ -9,7 +9,6 @@
 
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/stars.css">
 	<link rel="stylesheet" type="text/css" href="css/header.css">
 	<link rel="stylesheet" type="text/css" href="mobile/mobileindex.css">
 
@@ -22,7 +21,6 @@
 </head>
 
 <body>
-
 	<main>
 		<section class="layout">
 			<div class="header">
@@ -62,44 +60,48 @@
 		</section>
 	</main>
 
-	<div id="pisces">
-		<img src="src/index.png" alt="Pisces symbol">
+	<!-- 
+	parent all of these and use position absolute to place them -->
+	<div class="stars">
+		<div id="pisces">
+			<img src="src/index.png" alt="Pisces symbol">
+		</div>
+
+		<!-- stars -->
+		<div id="starpurple">
+			<a href="performance.html">
+				<img src="src/starpurple.png" alt="purple star">
+				<span class="performance-text">performance</span>
+			</a>
+		</div>
+
+		<div id="starpink">
+			<a href="media.html">
+				<img src="src/starpink.png" alt="pink star">
+				<span class="media-text">media</span>
+			</a>
+		</div>
+
+		<div id="staryellow">
+			<a href="newmedia.html">
+				<img src="src/staryellow.png" alt="yellow star">
+				<span class="newmedia-text">new media</span>
+			</a>
+		</div>
+
+		<div id="stargreen">
+			<a href="design.html">
+				<img src="src/stargreen.png" alt="green star">
+				<span class="design-text">design</span>
+			</a>
+		</div>
 	</div>
 
-	<!-- stars -->
-	<div id="starpurple">
-		<a href="performance.html">
-			<img src="src/starpurple.png" alt="purple star">
-			<span class="performance-text">performance</span>
-		</a>
-	</div>
-
-	<div id="starpink">
-		<a href="media.html">
-			<img src="src/starpink.png" alt="pink star">
-			<span class="media-text">media</span>
-		</a>
-	</div>
-
-	<div id="staryellow">
-		<a href="newmedia.html">
-			<img src="src/staryellow.png" alt="yellow star">
-			<span class="newmedia-text">new media</span>
-		</a>
-	</div>
-
-	<div id="stargreen">
-		<a href="design.html">
-			<img src="src/stargreen.png" alt="green star">
-			<span class="design-text">design</span>
-		</a>
-	</div>
 	<!-- <div class="footer">sofia pace @2025</div> -->
 	<canvas id="mousetrace"></canvas>
 
-	<script src="js/mousetrace.js"></script>
-	<script src="js/header.js"></script>
-
 </body>
+<script src="js/mousetrace.js"></script>
+<script src="js/header.js"></script>
 
 </html>

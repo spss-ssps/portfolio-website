@@ -1,5 +1,6 @@
 const mousetrace = document.getElementById('mousetrace');
 const ctx = mousetrace.getContext('2d');
+const body = document.body;
 
 let circles = [];
 let mouseX = 0;
@@ -20,7 +21,7 @@ window.addEventListener('resize', () => {
 });
 
 // Adjust mouse position based on canvas's position in the viewport
-mousetrace.addEventListener('mousemove', (event) => {
+body.addEventListener('mousemove', (event) => {
     // Get canvas position relative to the viewport
     const rect = mousetrace.getBoundingClientRect();
     mouseX = event.clientX - rect.left; // Adjust mouse X position

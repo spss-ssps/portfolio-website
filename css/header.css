@@ -59,6 +59,7 @@ nav ul li a {
 
 nav ul li a:hover {
   background-color: #a64dff;
+  border-radius: 5px;
   color: white;
 }
 
@@ -75,6 +76,7 @@ nav ul li a:hover {
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1001;
+  border-radius: 5px;
 }
 
 .dropdown:hover .dropdown-content {

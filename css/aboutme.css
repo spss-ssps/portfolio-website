@@ -1,5 +1,17 @@
 body {
     background-color: #f7f5e8;
+    margin: 0;
+    padding: 2rem;
+}
+
+#starchart {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 15vw;
+    height: auto;
+    z-index: -1;
 }
 
 /* About me page layout */

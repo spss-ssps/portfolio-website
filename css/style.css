@@ -1,11 +1,13 @@
 body {
     background-color: #f7f5e8;
+    margin: 0;
+    padding: 2rem;
 }
 
 #pisces {
     width: 60vw;
     height: 80vh;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -17,4 +19,193 @@ body {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+.stars {
+    position: relative;
+}
+
+/* Purple star */
+#starpurple {
+    position: absolute;
+    top: 32vh;
+    left: 24.8vw;
+    width: 4%;
+    z-index: 5;
+}
+
+#starpurple img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease;
+}
+
+#starpurple img:hover {
+    transform: rotate(180deg);
+}
+
+#starpurple a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#starpurple .performance-text {
+    position: absolute;
+    top: 50%;
+    right: 120%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 1.6vw;
+    font-family: comfortaa, sans-serif;
+    font-weight: 700;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#starpurple:hover .performance-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Pink star */
+#starpink {
+    position: absolute;
+    bottom: 28vh;
+    left: 29vw;
+    width: 4%;
+    z-index: 5;
+}
+
+#starpink img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease;
+}
+
+#starpink img:hover {
+    transform: rotate(180deg);
+}
+
+#starpink a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#starpink .media-text {
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translateY(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 1.6vw;
+    font-family: comfortaa, sans-serif;
+    font-weight: 700;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#starpink:hover .media-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Yellow star */
+#staryellow {
+    position: absolute;
+    top: 48vh;
+    left: 47vw;
+    width: 4.5%;
+    z-index: 5;
+}
+
+#staryellow img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease;
+}
+
+#staryellow img:hover {
+    transform: rotate(180deg);
+}
+
+#staryellow a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#staryellow .newmedia-text {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 1.6vw;
+    font-family: comfortaa, sans-serif;
+    font-weight: 700;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#staryellow:hover .newmedia-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Green star */
+#stargreen {
+    position: absolute;
+    top: 44.5vh;
+    right: 34vw;
+    width: 4%;
+    z-index: 5;
+}
+
+#stargreen img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.8s ease;
+}
+
+#stargreen img:hover {
+    transform: rotate(180deg);
+}
+
+#stargreeen a {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#stargreen .design-text {
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(0, 0, 0);
+    font-size: 1.6vw;
+    font-family: comfortaa, sans-serif;
+    font-weight: 700;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+#stargreen:hover .design-text {
+    visibility: visible;
+    opacity: 1;
+    /* background-color: #f7f5e8c8; */
 }
