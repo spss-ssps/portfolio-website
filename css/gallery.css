@@ -179,18 +179,6 @@ h3 {
   background: #a64dff;
 } */
 
-.footer {
-  position: relative;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: max-content;
-  margin-top: 2rem;
-  margin-bottom: 20px;
-  text-align: center;
-  font-size: clamp(0.8rem, 1vw, 1rem);
-  /* Responsive font size */
-}
 
 /* for side panel media */
 .media-container {
