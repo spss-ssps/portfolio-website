@@ -4,14 +4,60 @@ body {
     padding: 2rem;
 }
 
-#starchart {
+.star-chart .interactive-element {
+    cursor: pointer;
+}
+
+.star-chart .interactive-element path {
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+.star-chart {
+    pointer-events: auto;
+    z-index: -1;
     position: absolute;
     top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    width: 15vw;
-    height: auto;
-    z-index: -1;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    margin-bottom: 60px;
+}
+
+.star-chart #center_star {
+    z-index: 5;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    transform-box: fill-box;
+    cursor: pointer;
+    pointer-events: bounding-box;
+    /* This creates a hover area that covers the entire bounding box */
+}
+
+.star-chart #center_star:hover {
+    transform: rotate(180deg);
+}
+
+.star-chart g,
+.star-chart path {
+    pointer-events: auto;
+}
+
+.star-chart #sun,
+.star-chart #moon,
+.star-chart #rising {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+
+.star-chart #sun:hover path,
+.star-chart #moon:hover path,
+.star-chart #rising:hover path {
+    transform: scale(1.2);
+    transform-origin: center;
+    transform-box: fill-box;
 }
 
 /* About me page layout */
@@ -35,6 +81,16 @@ body {
     font-family: "Space Mono", monospace;
     font-size: 1vw;
     color: #000;
+    transition: opacity 0.3s ease;
+    opacity: 0.3;
+    text-align: center;
+    width: 100%;
+    margin-top: 6rem;
+    min-height: 100px;
+}
+
+.about-text p:hover {
+    opacity: 1;
 }
 
 .about-text h2 span:hover {
@@ -46,6 +102,11 @@ body {
 /* Embedded website styling */
 .embedded-site {
     margin-top: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    width: 40%;
 }
 
 .embedded-site h3 {
@@ -63,9 +124,8 @@ body {
 .iframe-container {
     position: relative;
     overflow: hidden;
-    width: 40%;
+    width: 100%;
     padding-top: 56.25%;
-    /* 16:9 Aspect Ratio */
     border: 1px solid #000;
     border-radius: 4px;
 }
@@ -85,6 +145,5 @@ body {
     .iframe-container {
         height: 500px;
         padding-top: 0;
-        /* Override the aspect ratio for larger screens */
     }
 }
