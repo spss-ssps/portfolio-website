@@ -47,16 +47,25 @@ body {
 .star-chart #rising {
     cursor: pointer;
     transition: transform 0.3s ease;
+    transform-origin: center;
+    transform-box: fill-box;
     z-index: 10;
+}
+
+.star-chart #sun path,
+.star-chart #moon path,
+.star-chart #rising path {
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: transform 0.3s ease;
 }
 
 .star-chart #sun:hover path,
 .star-chart #moon:hover path,
 .star-chart #rising:hover path {
-    transform: scale(1.2);
-    transform-origin: center;
-    transform-box: fill-box;
+    transform: scale(1.1);
 }
+
 
 /* About me page layout */
 /* .about-content {
@@ -70,27 +79,23 @@ body {
 } */
 
 .about-text {
-    z-index: 2;
+    position: absolute;
+    z-index: 10;
     color: #000;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
+    width: 40%;
 }
 
-/* .about-text h2 span {
-    font-family: "Comfortaa", sans-serif;
-    font-size: 2vw;
-    transition: letter-spacing 0.3s ease, transform 0.3s ease;
-    display: inline-block;
-} */
-
 .about-text p {
-    position: relative;
     font-family: "Space Mono", monospace;
     font-size: 1vw;
     opacity: 0.3;
     transition: opacity 0.3s ease;
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translateY(-50%);
+    position: static;
+    /* Changed from absolute */
+    margin: 0;
 }
 
 .about-text p:hover {
@@ -104,7 +109,7 @@ body {
 }
 
 /* Embedded website styling */
-.embedded-site {
+.aboutme-element {
     margin-top: 2rem;
     position: absolute;
     top: 50%;
@@ -113,13 +118,13 @@ body {
     width: 40%;
 }
 
-.embedded-site h3 {
+.aboutme-element h3 {
     font-family: "Space Mono", monospace;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
-.embedded-site p {
+.aboutme-element p {
     font-family: "Space Mono", monospace;
     margin-bottom: 1rem;
     font-size: 1rem;
