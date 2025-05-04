@@ -4,25 +4,24 @@ body {
     padding: 2rem;
 }
 
+/* Star Chart Styling */
+.star-chart {
+    pointer-events: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20vw;
+    margin-bottom: 0;
+    z-index: -1;
+}
+
 .star-chart .interactive-element {
     cursor: pointer;
 }
 
 .star-chart .interactive-element path {
     transition: transform 0.3s ease;
-    transform-origin: center;
-    transform-box: fill-box;
-}
-
-.star-chart {
-    pointer-events: auto;
-    z-index: -1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 20vw;
-    margin-bottom: 60px;
 }
 
 .star-chart #center_star {
@@ -32,7 +31,6 @@ body {
     transform-box: fill-box;
     cursor: pointer;
     pointer-events: bounding-box;
-    /* This creates a hover area that covers the entire bounding box */
 }
 
 .star-chart #center_star:hover {
@@ -61,32 +59,38 @@ body {
 }
 
 /* About me page layout */
-.about-content {
-    max-width: 1200px;
+/* .about-content {
     margin: 0 auto;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    position: relative;
+    z-index: 1;
+} */
+
+.about-text {
+    z-index: 2;
+    color: #000;
 }
 
-.about-text h2 span {
+/* .about-text h2 span {
     font-family: "Comfortaa", sans-serif;
     font-size: 2vw;
-    color: #000;
     transition: letter-spacing 0.3s ease, transform 0.3s ease;
-}
+    display: inline-block;
+} */
 
 .about-text p {
+    position: relative;
     font-family: "Space Mono", monospace;
     font-size: 1vw;
-    color: #000;
-    transition: opacity 0.3s ease;
     opacity: 0.3;
-    text-align: center;
-    width: 100%;
-    margin-top: 6rem;
-    min-height: 100px;
+    transition: opacity 0.3s ease;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translateY(-50%);
 }
 
 .about-text p:hover {
