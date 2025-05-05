@@ -177,3 +177,13 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+
+//close button functionality
+const sidePanel = document.querySelector('.side-panel');
+const closeButton = document.querySelector('.closePanel');
+
+closeButton.addEventListener('click', () => {
+  sidePanel.classList.remove('open');
+  document.querySelector('.layout').classList.remove('shifted');
+});
+

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Reset positions
         starChart.style.left = '50%';
         aboutText.style.left = '30%';
-        aboutText.style.opacity = '0.3';
+        // aboutText.style.opacity = '0.3';
     }
 
     // Function to toggle specific content
@@ -92,3 +92,4 @@ document.addEventListener('DOMContentLoaded', function () {
     sunElement.style.cursor = 'pointer';
     risingElement.style.cursor = 'pointer';
 });
+

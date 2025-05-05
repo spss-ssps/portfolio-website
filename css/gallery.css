@@ -46,7 +46,7 @@ h2 {
 }
 
 p {
-  font-size: 0.6vw;
+  font-size: 1vw;
 }
 
 h3 {
@@ -158,27 +158,6 @@ h3 {
   text-align: left;
 }
 
-/* .panel-content button {
-  background: black;
-  color: white;
-  border: none;
-  width: 3vw;
-  height: 3vw;
-  min-width: 30px;
-  min-height: 30px;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.panel-content button:hover {
-  background: #a64dff;
-} */
-
-
 /* for side panel media */
 .media-container {
   margin: 20px 0;
@@ -203,6 +182,10 @@ h3 {
 
 .additional-image {
   margin-top: 10px;
+}
+
+.closePanel {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -302,6 +285,23 @@ h3 {
 
   .media-container iframe {
     height: 200px;
-    /* fixed height for small screens */
+  }
+
+  .closePanel {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    z-index: 1001;
+    /* Ensure the button is above the content */
+  }
+
+  .closePanel:hover {
+    color: #a64dff;
   }
 }
