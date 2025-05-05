@@ -12,7 +12,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 20vw;
-    margin-bottom: 0;
     z-index: -1;
 }
 
@@ -25,7 +24,6 @@ body {
 }
 
 .star-chart #center_star {
-    z-index: 5;
     transition: transform 0.3s ease;
     transform-origin: center;
     transform-box: fill-box;
@@ -49,7 +47,6 @@ body {
     transition: transform 0.3s ease;
     transform-origin: center;
     transform-box: fill-box;
-    z-index: 10;
 }
 
 .star-chart #sun path,
@@ -66,18 +63,6 @@ body {
     transform: scale(1.1);
 }
 
-
-/* About me page layout */
-/* .about-content {
-    margin: 0 auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-    position: relative;
-    z-index: 1;
-} */
-
 .about-text {
     position: absolute;
     z-index: 10;
@@ -93,8 +78,6 @@ body {
     font-size: 1vw;
     opacity: 0.3;
     transition: opacity 0.3s ease;
-    position: static;
-    /* Changed from absolute */
     margin: 0;
 }
 
@@ -108,20 +91,29 @@ body {
     font-style: italic;
 }
 
-/* Embedded website styling */
 .aboutme-element {
-    margin-top: 2rem;
     position: absolute;
     top: 50%;
     right: 10%;
     transform: translateY(-50%);
     width: 40%;
+    max-height: 70vh;
+    overflow-y: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .aboutme-element h3 {
     font-family: "Space Mono", monospace;
+    margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    position: sticky;
+    top: 0;
+    padding: 0.5rem 0;
+    z-index: 1;
 }
 
 .aboutme-element p {
@@ -149,7 +141,16 @@ body {
     zoom: 80%;
 }
 
-/* Responsive adjustments */
+.sofia-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    max-height: 40vh;
+    object-fit: cover;
+}
+
 @media (min-width: 768px) {
     .iframe-container {
         height: 500px;

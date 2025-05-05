@@ -83,3 +83,74 @@ body {
     visibility: visible;
     opacity: 1;
 }
+
+@media (max-width: 768px) {
+    .stars-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95vw;
+        /* Ensure it doesn't get too small */
+        height: auto;
+    }
+
+    .star {
+        width: 12%;
+        /* Adjust size of stars */
+        position: absolute;
+        /* Ensure absolute positioning for fine control */
+    }
+
+    .star img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Adjust positions to fixed pixel values */
+    #starpurple {
+        top: 10%;
+        left: 5%;
+    }
+
+    #starpink {
+        top: 25%;
+        left: 70%;
+    }
+
+    #staryellow {
+        top: 60%;
+        left: 50%;
+    }
+
+    #stargreen {
+        bottom: 10%;
+        left: 30%;
+    }
+
+    /* Tooltips adjustment */
+    #starpurple span {
+        top: 60%;
+        right: 100%;
+        transform: translateY(-50%);
+    }
+
+    #starpink span {
+        top: 60%;
+        left: 100%;
+        transform: translateY(-50%);
+    }
+
+    #staryellow span {
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #stargreen span {
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
