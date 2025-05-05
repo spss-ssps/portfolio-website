@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const isMobile = window.innerWidth <= 768;
 
-        // Reset transitions
-        starChart.style.transition = '';
-        aboutText.style.transition = '';
+        // Apply transitions first
+        starChart.style.transition = 'all 0.5s ease';
+        aboutText.style.transition = 'all 0.5s ease';
 
-        // Reset positioning styles appropriately
+        // Then set positioning styles
         if (isMobile) {
             starChart.style.left = '50%';
             starChart.style.position = 'absolute';
