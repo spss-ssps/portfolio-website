@@ -21,35 +21,50 @@ document.addEventListener('DOMContentLoaded', function () {
         sunContent.style.display = 'none';
         risingContent.style.display = 'none';
 
-        // Reset positions
-        starChart.style.left = '50%';
-        aboutText.style.left = '30%';
-        // aboutText.style.opacity = '0.3';
+        const isMobile = window.innerWidth <= 768;
+
+        // Reset transitions
+        starChart.style.transition = '';
+        aboutText.style.transition = '';
+
+        // Reset positioning styles appropriately
+        if (isMobile) {
+            starChart.style.left = '50%';
+            starChart.style.position = 'absolute';
+
+            aboutText.style.left = '50%';
+            aboutText.style.position = 'absolute';
+            aboutText.style.opacity = '1';
+        } else {
+            starChart.style.left = '50%';
+            starChart.style.position = 'absolute';
+
+            aboutText.style.left = '30%';
+            aboutText.style.position = 'absolute';
+            aboutText.style.opacity = '1';
+        }
     }
 
     // Function to toggle specific content
     function toggleContent(contentElement) {
+        const isMobile = window.innerWidth <= 768;
         const isShowing = contentElement.style.display !== 'none';
 
         // Hide all first
         hideAllContent();
 
         if (!isShowing) {
-            // Show the selected content
             contentElement.style.display = 'block';
 
-            // Apply styles with transitions
-            starChart.style.transition = 'all 0.5s ease';
-            aboutText.style.transition = 'all 0.5s ease';
+            if (!isMobile) {
+                // Apply transitions for desktop only
+                starChart.style.transition = 'all 0.5s ease';
+                aboutText.style.transition = 'all 0.5s ease';
 
-            // Add positioning to make left property work
-            starChart.style.position = 'absolute';
-            aboutText.style.position = 'absolute';
-
-            // Move elements to the side
-            starChart.style.left = '25%';
-            aboutText.style.left = '5%';
-            aboutText.style.opacity = '1';
+                // Move elements to the side
+                starChart.style.left = '25%';
+                aboutText.style.left = '5%';
+            }
         }
     }
 
@@ -92,4 +107,3 @@ document.addEventListener('DOMContentLoaded', function () {
     sunElement.style.cursor = 'pointer';
     risingElement.style.cursor = 'pointer';
 });
-
