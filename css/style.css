@@ -7,7 +7,6 @@ body {
 .stars-container {
     position: relative;
     width: 60vw;
-    /* adjust as needed */
     margin: 0 auto;
 }
 
@@ -20,7 +19,6 @@ body {
 .star {
     position: absolute;
     width: 8%;
-    /* scales with background */
 }
 
 .star img {
@@ -85,54 +83,32 @@ body {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding: 1rem;
+        /* Reduce padding on small screens */
+    }
+
     .stars-container {
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 95vw;
-        /* Ensure it doesn't get too small */
-        height: auto;
+        width: 90vw;
     }
 
     .star {
         width: 12%;
-        /* Adjust size of stars */
-        position: absolute;
-        /* Ensure absolute positioning for fine control */
+        transform: translate(-13%, -10%);
     }
 
-    .star img {
-        width: 100%;
-        height: auto;
-        display: block;
+    .star span {
+        font-size: 4vw;
     }
 
-    /* Adjust positions to fixed pixel values */
-    #starpurple {
-        top: 10%;
-        left: 5%;
-    }
-
-    #starpink {
-        top: 25%;
-        left: 70%;
-    }
-
-    #staryellow {
-        top: 60%;
-        left: 50%;
-    }
-
-    #stargreen {
-        bottom: 10%;
-        left: 30%;
-    }
-
-    /* Tooltips adjustment */
+    /* Tooltip adjustments for smaller screens */
     #starpurple span {
         top: 60%;
-        right: 100%;
+        left: 100%;
         transform: translateY(-50%);
     }
 
@@ -143,14 +119,19 @@ body {
     }
 
     #staryellow span {
-        top: 110%;
+        top: 130%;
         left: 50%;
         transform: translateX(-50%);
     }
 
     #stargreen span {
-        bottom: 110%;
+        bottom: 130%;
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    .star:hover span {
+        font-size: 3.5vw;
+        /* Scale down tooltip font size */
     }
 }
