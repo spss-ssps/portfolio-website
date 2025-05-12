@@ -193,10 +193,10 @@ body {
     }
 
     .aboutme-element {
-        position: relative;
-        top: 52%;
+        /* position: relative; */
+        top: 58%;
         right: 5%;
-        width: 90%;
+        /* width: 90%; */
         max-height: 50vh;
     }
 

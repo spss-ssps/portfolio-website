@@ -55,21 +55,22 @@ document.addEventListener('DOMContentLoaded', function () {
       description: "dance video/animation project"
     },
 
+    5: {
+      title: "body as textile",
+      date: "2025",
+      mediaType: "image",
+      mediaId: "",
+      description: "This Project explore textile as hypertext extends beyond thread and fabric, weaving information through bodies, spaces, and histories. By expanding ideas on human kinesthetics and exploring the potential for unconventional archival mediums, we can rethink how bodies inhabit space and how textiles both enclose and provide comfort within it—ultimately revealing how even the clothing we wear may serve as carriers of informatio.<br><br>by Julia Kan and Sofia Pace"
+
+    },
+
     //new media
     6: {
       title: "chromadance",
       date: "2024",
       mediaType: "image",
-      mediaId: "<",
-      description: "An audiovisual experience where individuals are encouraged to connect more deeply with their senses through movement. The abstracted kinetic visual expression of the installation invites inner self into the outer world. Our user experience is one where the dancer is able to feel synchronization between what they see, hear, and feel. Through achieving this mind-body-spirit harmony, users can relax and unplug from the hustle of daily life."
-    },
-
-    5: {
-      title: "something something",
-      date: "2025",
-      mediaType: "image",
-      mediaId: "",
-      description: "A looping GIF exploring the internal structures of a human body."
+      mediaId: "work/chromadance.jpg",
+      description: "An audiovisual experience where individuals are encouraged to connect more deeply with their senses through movement. The abstracted kinetic visual expression of the installation invites inner self into the outer world. Our user experience is one where the dancer is able to feel synchronization between what they see, hear, and feel. Through achieving this mind-body-spirit harmony, users can relax and unplug from the hustle of daily life.<br><br>by Prisha Jain, Niki Hu, and Sofia Pace"
     },
 
     //design
