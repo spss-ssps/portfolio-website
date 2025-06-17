@@ -28,7 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
       mediaId: "Uvxuum6luEY",
       description: "<strong>art direction and video:</strong><br>Sofia Pace<br><br><strong>music:</strong><br>We've Never Met but Can We Have a Cup of Coffee or Something by In Love with A Ghost<br>Empty Crown by YAS<br><br><strong>performance and choreography:</strong><br>Sofia Pace and Rainy Fan"
     },
+    8: {
+      title: "period god",
+      date: "2025",
+      mediaType: "youtube",
+      mediaId: "TYAWdhVXL80",
+      description: "Periods are often hidden, silenced, or treated with shame in society.<br><br>Through this project,Period God hopes to confront sigmas around menstruation and the female body in a way they could be seen, heard, and celebrated. <br><br> co-choreographed by Sofia Pace <br><br><a href='https://periodgod.cargo.site' target='_blank'>full project site here</a>"
 
+
+    },
     //media
     2: {
       title: "corporeal lines",
@@ -69,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
       title: "chromadance",
       date: "2024",
       mediaType: "youtube",
-      mediaId: "VBUXyQ6DMTg",
+      mediaId: "-lirpl3Cy7I",
       description: "An audiovisual experience where individuals are encouraged to connect more deeply with their senses through movement. The abstracted kinetic visual expression of the installation invites inner self into the outer world. Our user experience is one where the dancer is able to feel synchronization between what they see, hear, and feel. Through achieving this mind-body-spirit harmony, users can relax and unplug from the hustle of daily life.<br><br>by Prisha Jain, Niki Hu, and Sofia Pace"
     },
 
