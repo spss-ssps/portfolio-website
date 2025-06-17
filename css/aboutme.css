@@ -168,7 +168,7 @@ body {
     }
 
     .star-chart {
-        width: 60vw;
+        width: 40vw;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -178,8 +178,8 @@ body {
 
     .about-text {
         width: 90%;
-        font-size: 0.6rem;
-        top: 30%;
+        font-size: 0.2rem;
+        top: 40%;
         left: 50%;
         transform: translateX(-50%);
         position: absolute;
