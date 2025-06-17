@@ -68,8 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
     6: {
       title: "chromadance",
       date: "2024",
-      mediaType: "image",
-      mediaId: "work/chromadance.jpg",
+      mediaType: "youtube",
+      mediaId: "VBUXyQ6DMTg",
       description: "An audiovisual experience where individuals are encouraged to connect more deeply with their senses through movement. The abstracted kinetic visual expression of the installation invites inner self into the outer world. Our user experience is one where the dancer is able to feel synchronization between what they see, hear, and feel. Through achieving this mind-body-spirit harmony, users can relax and unplug from the hustle of daily life.<br><br>by Prisha Jain, Niki Hu, and Sofia Pace"
     },
 
