@@ -85,7 +85,10 @@ document.addEventListener('DOMContentLoaded', function () {
     7: {
       title: "fabrication projects",
       date: "2025",
-      description: "For these projects, I wanted to explore cosmic and celestial shapes and forms, with an experimental approach to more popular interpretations of these concepts. I’m particularly drawn to organic flowing shapes and dream-like aesthetics. By framing this as both a focused and open-ended prompt, I aimed to expand my possibilities in terms of materials and fabrication practices."
+      description: "For these projects, I wanted to explore cosmic and celestial shapes and forms, with an experimental approach to more popular interpretations of these concepts. I’m particularly drawn to organic flowing shapes and dream-like aesthetics. By framing this as both a focused and open-ended prompt, I aimed to expand my possibilities in terms of materials and fabrication practices.<br><br><a href='https://sofiasfabrication.cargo.site' target='_blank'>full project site here</a>",
+      mediaType: "image",
+      mediaId: "work/purse.jpeg", // Main image
+      additionalImages: ["work/coaster.jpeg", "work/embox.jpeg", "work/mooncycle.jpeg"]
     },
 
   };
