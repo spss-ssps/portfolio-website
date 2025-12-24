@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="src/icon.png">
+    <title>work - sofia pace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/header-nav.css">
+    <link rel="stylesheet" type="text/css" href="css/work-gallery.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="logo-title">
+            <a href="index.html" style="text-decoration: none;">
+                <h1>sofia pace</h1>
+            </a>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="work.html" class="active">work</a></li>
+                <li><a href="aboutme.html">about me</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <!-- Category Filter -->
+        <div class="filter-bar">
+            <button class="filter-btn active" data-category="all">all</button>
+            <button class="filter-btn" data-category="performance">performance</button>
+            <button class="filter-btn" data-category="media">media</button>
+            <button class="filter-btn" data-category="newmedia">new media</button>
+            <button class="filter-btn" data-category="design">design</button>
+            <a href="https://sofiasweb.art" target="_blank" class="filter-btn web-art-btn">web art</a>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-container">
+            <svg class="constellation-lines" id="constellationLines"></svg>
+            <div class="projects-grid" id="projectsGrid"></div>
+        </div>
+
+        <!-- Project Detail Panel -->
+        <div class="project-detail" id="projectDetail">
+            <button class="close-detail" id="closeDetail">&times;</button>
+            <div class="detail-content">
+                <h2 class="detail-title"></h2>
+                <p class="detail-date"></p>
+                <p class="detail-role"></p>
+                <div class="detail-tags"></div>
+                <div class="detail-media"></div>
+                <div class="detail-description"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer" class="footer">
+        <a href="https://www.instagram.com/sofias.space/" target="_blank">instagram</a>
+        <a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank">linkedin</a>
+        <a href="https://vimeo.com/sofiasspace" target="_blank">vimeo</a>
+    </div>
+
+    <canvas id="mousetrace"></canvas>
+
+    <script src="js/mousetrace.js"></script>
+    <script src="js/work-gallery.js"></script>
+</body>
+
+</html>

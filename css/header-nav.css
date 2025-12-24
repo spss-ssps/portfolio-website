@@ -1,0 +1,227 @@
+/* Header with Inline Navigation */
+
+body {
+    background-color: #0d0d0d;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 900;
+    font-family: Comfortaa, sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 2rem;
+    background: #0d0d0d;
+    box-sizing: border-box;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: clamp(3.5rem, 3vw, 2.5rem);
+    color: #e6e6e6;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    transition: opacity 0.3s ease;
+}
+
+.logo-title h1:hover {
+    opacity: 0.7;
+}
+
+/* Header Navigation */
+.header-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.header-nav ul li {
+    position: relative;
+}
+
+.header-nav ul li a {
+    text-decoration: none;
+    color: rgba(230, 230, 230, 0.7);
+    font-size: 1rem;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+    transition: all 0.3s ease;
+    text-transform: lowercase;
+    cursor: pointer;
+    position: relative;
+}
+
+.header-nav ul li a:hover {
+    color: #e6e6e6;
+}
+
+.header-nav ul li a.active {
+    color: #e6e6e6;
+}
+
+.header-nav ul li a.active::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% + 1.2rem);
+    height: calc(100% + 1.2rem);
+    border: 1px solid rgba(230, 230, 230, 0.4);
+    border-radius: 50%;
+    pointer-events: none;
+    aspect-ratio: 1/1;
+}
+
+/* Dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown>a::after {
+    content: ' ↓';
+    font-size: 0.7em;
+    margin-left: 0.2rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.nav-dropdown.active>a::after {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-content {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 0;
+    background: rgba(13, 13, 13, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(230, 230, 230, 0.2);
+    border-radius: 8px;
+    padding: 0.75rem 0;
+    min-width: 150px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.nav-dropdown.active .nav-dropdown-content {
+    max-height: 300px;
+    opacity: 1;
+}
+
+.nav-dropdown-content li {
+    margin: 0;
+}
+
+.nav-dropdown-content a {
+    display: block;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem !important;
+    color: rgba(230, 230, 230, 0.7) !important;
+    white-space: nowrap;
+}
+
+.nav-dropdown-content a:hover {
+    color: #0d0d0d !important;
+    background: #e6e6e6;
+}
+
+/* Footer with Social Links */
+.footer,
+#site-footer {
+    font-family: 'Space Mono', monospace;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    text-align: center;
+    font-size: clamp(0.8rem, 1vw, 0.9rem);
+    z-index: 10;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer a,
+#site-footer a {
+    color: rgba(230, 230, 230, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-family: 'Space Mono', monospace;
+}
+
+.footer a:hover,
+#site-footer a:hover {
+    color: #e6e6e6;
+}
+
+#mousetrace {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .logo-title h1 {
+        font-size: 3rem;
+    }
+
+    .header-nav ul {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .header-nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .footer,
+    #site-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-title h1 {
+        font-size: 2.4rem;
+    }
+}
