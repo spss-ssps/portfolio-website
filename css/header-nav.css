@@ -160,7 +160,9 @@ body {
     font-size: clamp(0.8rem, 1vw, 0.9rem);
     z-index: 10;
     display: flex;
+    flex-direction: row;
     gap: 1.5rem;
+    white-space: nowrap;
 }
 
 .footer a,
@@ -214,9 +216,11 @@ body {
 
     .footer,
     #site-footer {
-        flex-direction: column;
         gap: 0.5rem;
         font-size: 0.75rem;
+        overflow-x: auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
     }
 }
 
