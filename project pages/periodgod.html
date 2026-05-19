@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="src/starIcon.png">
+  <title>period god — sofia pace</title>
+  <meta name="description" content="Project by Sofia Pace">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/header-nav.css">
+  <link rel="stylesheet" href="../css/project.css">
+</head>
+
+<body>
+
+  <div class="starfield" id="starfield"></div>
+
+  <header class="site-header">
+    <a href="../index.html" class="logo">sofia <em>pace</em></a>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="../work.html" class="active">work</a></li>
+        <li><a href="../aboutme.html">about me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="project-main">
+
+    <a href="../work.html" class="back-link">
+      <span>←</span> all work
+    </a>
+
+    <div class="hero">
+      <div class="hero-media">
+        <!-- For an image: -->
+        <img src="../work/period god/periodgod.jpeg" alt="Project hero" class="hero-img">
+
+        <!-- For a video embed, replace the img with:
+        <div class="hero-video-wrap">
+          <iframe src="https://player.vimeo.com/video/YOUR_VIDEO_ID?autoplay=0&title=0&byline=0&portrait=0"
+            frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        -->
+
+      </div>
+      <div class="hero-gradient"></div>
+      <div class="hero-title-wrap">
+        <h1 class="hero-title">period god</h1>
+      </div>
+
+      <!-- Tags -->
+      <div class="tags-row">
+        <span class="tag tag-design">performance</span>
+        <span class="tag tag-newmedia">new media</span>
+      </div>
+    </div>
+
+    <div class="meta-strip">
+      <div class="meta-cell">
+        <div class="meta-label">role</div>
+        <div class="meta-value role-value">co-choreographer · performer</div>
+      </div>
+      <div class="meta-cell">
+        <div class="meta-label">medium</div>
+        <div class="meta-value">performance · unreal engine · motion capture</div>
+      </div>
+      <div class="meta-cell">
+        <div class="meta-label">year</div>
+        <div class="meta-value">2025</div>
+      </div>
+    </div>
+
+
+    <div class="project-body">
+
+      <!-- About section -->
+      <div class="section-text">
+        <div class="section-label">about</div>
+        <p>Periods are often hidden, silenced, or treated with shame in society.
+          <br><br>
+          Through this project, Period God hopes to confront stigmas around menstruation and the female body in a way
+          they could be seen, heard, and celebrated.
+        </p>
+      </div>
+
+
+      <div class="hero-video-wrap">
+        <iframe src="https://www.youtube.com/embed/TYAWdhVXL80?t=2s" title="period god — video" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+          allowfullscreen></iframe>
+      </div>
+
+      <!-- External link -->
+      <div class="ext-link-wrap">
+        <a href="https://periodgod.cargo.site/" target="_blank" rel="noopener" class="ext-link">
+          full project site here ↗
+        </a>
+      </div>
+
+      <!-- Optional: additional text section -->
+      <!--
+      <div class="section-text">
+        <div class="section-label">notes</div>
+        <p>Any additional notes, context, or credits.</p>
+      </div>
+      -->
+
+      <div class="soft-divider"></div>
+
+      <!-- Collaborators -->
+      <div class="collaborators">
+        <div class="section-label">collaborators</div>
+        <div class="collab-list">
+          <span class="collab-pill">Xiaoxu Han — director & visual & unreal artist</span>
+          <span class="collab-pill">Niki Hu — co-choreographer & performer</span> <span class="collab-pill">Siyang Dai —
+            concept & story development, researcher</span><span class="collab-pill">Joe Deng —
+            music</span> <span class="collab-pill">Yirui Chen — costume</span>
+        </div>
+      </div>
+
+    </div><!-- /project-body -->
+
+    <!-- Next project link (optional) -->
+    <div class="next-project">
+      <a href="../project pages/eltocadordelaabuela.html" class="next-link">
+        <span class="next-label">next project</span>
+        <span class="next-title">el tocador de la abuela →</span>
+      </a>
+    </div>
+
+  </main>
+
+  <footer id="site-footer" class="footer">
+    <a href="https://www.instagram.com/sofias.space/" target="_blank" rel="noopener">instagram</a>
+    <a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://vimeo.com/sofiasspace" target="_blank" rel="noopener">vimeo</a>
+  </footer>
+
+  <canvas id="mousetrace"></canvas>
+  <script src="js/mousetrace.js"></script>
+  <script src="js/starfield.js"></script>
+</body>
+
+</html>

@@ -1,87 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="src/starIcon.png">
-	<title>sofia pace</title>
-
-
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/header-nav.css">
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-		rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="src/starIcon.png">
+  <title>sofia pace</title>
+  <meta name="description"
+    content="Sofia Pace - visual and performing artist based in New York exploring space, installation, and creative technology">
+  <meta property="og:title" content="Sofia Pace">
+  <meta property="og:description"
+    content="Visual and performing artist exploring installation, performance, and creative technology">
+  <meta property="og:image" content="https://your-portfolio-domain.com/src/index.svg">
+  <meta property="og:url" content="https://your-portfolio-domain.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header-nav.css">
 </head>
 
 <body>
-	<!-- Header with Navigation in Name -->
-	<div class="header">
-		<div class="logo-title">
-			<a href="index.html" style="text-decoration: none;">
-				<h1>sofia pace</h1>
-			</a>
-		</div>
-		<nav class="header-nav">
-			<ul>
-				<li><a href="work.html">work</a></li>
-				<li><a href="aboutme.html">about me</a></li>
-			</ul>
-		</nav>
-	</div>
 
-	<main>
+  <div class="starfield" id="starfield"></div>
 
-		<!-- Stars Container for Category Selection -->
-		<div class="stars-container">
-			<img src="src/index.svg" alt="Background" class="background-image" />
+  <header class="site-header">
+    <a href="index.html" class="logo">sofia <em>pace</em></a>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="work.html">work</a></li>
+        <li><a href="aboutme.html">about me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-			<div class="star" id="starpurple" style="top: 24%; left: 3.5%;" data-category="performance">
-				<img src="src/starpurple.svg" alt="purple star" />
-				<span class="performance-text">performance</span>
-			</div>
+  <main>
+    <div class="stars-container" role="navigation" aria-label="Project categories">
 
-			<div class="star" id="starpink" style="top: 77%; left: 4.5%;" data-category="media">
-				<img src="src/starpink.svg" alt="pink star" />
-				<span class="media-text">media</span>
-			</div>
+      <!-- constellation background -->
+      <svg class="background-image" viewBox="0 0 2171 1439" fill="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path
+          d="M1719.08 680.433L1168.58 755.933C1021.78 753.133 982.742 781.767 981.575 796.433L735.575 947.933C646.375 949.533 577.075 976.267 553.575 989.433C442.575 1061.43 215.575 1207.93 195.575 1217.93C175.575 1227.93 132.242 1314.43 113.075 1356.43C92.0752 1377.43 45.3752 1421.63 26.5752 1430.43C7.77518 1439.23 4.40851 1426.77 5.07518 1419.43C39.5752 1280.6 118.775 920.933 159.575 592.933C168.075 511.933 183.775 344.633 178.575 323.433M1719.08 680.433L1859.58 581.933C1871.24 569.767 1919.48 550.533 2019.08 570.933C2060.58 582.6 2143.58 607.533 2143.58 613.933C2143.58 621.933 2192.58 621.433 2143.58 711.433L2100.08 810.433C2094.24 825.433 2071.48 856.133 2027.08 858.933C1982.68 861.733 1921.91 872.767 1897.08 877.933C1873.91 888.6 1822.88 895.533 1804.08 837.933C1785.28 780.333 1764.58 729.6 1756.58 711.433L1719.08 680.433ZM178.575 323.433L104.075 234.933C96.4085 221.267 84.8752 188.733 100.075 167.933L147.575 25.4333C155.575 9.2666 173.675 -12.6667 182.075 28.9333V120.433L178.575 251.933V323.433Z"
+          stroke="rgba(200,210,255,0.35)" stroke-width="4" />
+      </svg>
 
-			<div class="star" id="staryellow" style="top: 58%; left: 28%;" data-category="newmedia">
-				<img src="src/staryellow.svg" alt="yellow star" />
-				<span class="newmedia-text">new media</span>
-			</div>
+      <div class="star" id="starpurple" style="top:24%;left:3.5%;" data-category="performance" tabindex="0"
+        role="button" aria-label="View performance projects">
+        <img src="src/starpurple.svg" alt="purple star" />
+        <span>performance</span>
+      </div>
 
-			<div class="star" id="stargreen" style="top: 47%; left: 42%;" data-category="design">
-				<img src="src/stargreen.svg" alt="green star" />
-				<span class="design-text">design</span>
-			</div>
+      <div class="star" id="starpink" style="top:76%;left:4.5%;" data-category="media" tabindex="0" role="button"
+        aria-label="View media projects">
+        <img src="src/starpink.svg" alt="pink star" />
+        <span>media</span>
+      </div>
 
-			<div class="star" id="starblue" style="top: 42%; left: 68%;">
-				<a href="https://sofiasweb.art" target="_blank">
-					<img src="src/starblue.svg" alt="blue star" />
-					<span class="webart-text">web art</span>
-				</a>
-			</div>
-		</div>
+      <div class="star" id="staryellow" style="top:59%;left:28%;" data-category="newmedia" tabindex="0" role="button"
+        aria-label="View new media projects">
+        <img src="src/staryellow.svg" alt="yellow star" />
+        <span>new media</span>
+      </div>
 
-	</main>
+      <div class="star" id="stargreen" style="top:47%;left:43%;" data-category="design" tabindex="0" role="button"
+        aria-label="View design projects">
+        <img src="src/stargreen.svg" alt="green star" />
+        <span>design</span>
+      </div>
 
-	<div id="site-footer" class="footer">
-		<a href="https://www.instagram.com/sofias.space/" target="_blank">instagram</a>
-		<a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank">linkedin</a>
-		<a href="https://vimeo.com/sofiasspace" target="_blank">vimeo</a>
-	</div>
+      <div class="star" id="starblue" style="top:42%;left:68%;" tabindex="0" role="link"
+        aria-label="View web art projects">
+        <a href="https://sofiasweb.art" target="_blank" rel="noopener">
+          <img src="src/starblue.svg" alt="blue star" />
+          <span>web art ↗</span>
+        </a>
+      </div>
 
-	<canvas id="mousetrace"></canvas>
+    </div>
+  </main>
 
+  <footer id="site-footer" class="footer">
+    <a href="https://www.instagram.com/sofias.space/" target="_blank" rel="noopener">instagram</a>
+    <a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://vimeo.com/sofiasspace" target="_blank" rel="noopener">vimeo</a>
+  </footer>
+
+  <!-- <canvas id="mousetrace"></canvas> -->
+
+  <script src="js/starfield.js"></script>
+
+  <script>
+    // Star navigation — keyboard support
+    document.querySelectorAll('.star[data-category]').forEach(star => {
+      star.addEventListener('click', () => {
+        window.location.href = `work.html?category=${star.dataset.category}`;
+      });
+      star.addEventListener('keypress', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          window.location.href = `work.html?category=${star.dataset.category}`;
+        }
+      });
+    });
+  </script>
 </body>
-<script src="js/mousetrace.js"></script>
-<script src="js/home-gallery.js"></script>
-<script src="js/header.js"></script>
 
 </html>

@@ -2,182 +2,169 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="src/icon.png">
-	<title>sofia pace</title>
-
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Comfortaa:wght@300..700&family=Didact+Gothic&display=swap"
-		rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-		rel="stylesheet">
-
-	<link rel="stylesheet" type="text/css" href="css/header-nav.css">
-	<link rel="stylesheet" type="text/css" href="css/aboutme.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="src/starIcon.png">
+  <title>about me — sofia pace</title>
+  <meta name="description"
+    content="Sofia Pace - New York based visual and performing artist exploring space, installation, and creative technology">
+  <meta property="og:title" content="Sofia Pace | About">
+  <meta property="og:description"
+    content="Italian and Peruvian artist working in performance, installation, and creative technology at NYU ITP">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header-nav.css">
+  <link rel="stylesheet" href="css/aboutme.css">
 </head>
 
 <body>
-	<main>
-		<section class="layout">
-			<div class="header">
-				<div class="logo-title">
-					<a href="index.html" style="text-decoration: none;">
-						<h1>sofia pace</h1>
-					</a>
-				</div>
-				<nav class="header-nav">
-					<ul>
-						<li><a href="work.html">work</a></li>
-						<li><a href="aboutme.html" class="active">about me</a></li>
-					</ul>
-				</nav>
-			</div>
-		</section>
-	</main>
 
-	<!-- <iframe src="http://159.89.178.116"
-		style="position: fixed; top: 8rem; left: 0; width: 100%; height: calc(100vh - 6rem); border: none; z-index: 1;"></iframe> -->
+  <div class="starfield" id="starfield"></div>
 
-	<!-- ABOUT PAGE -->
-	<div id="about" class="page">
-		<div id="orrery-container">
-			<div class="orbit orbit-1"></div>
-			<div class="orbit orbit-2"></div>
-			<div class="orbit orbit-3"></div>
+  <header class="site-header">
+    <a href="index.html" class="logo">sofia <em>pace</em></a>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="work.html">work</a></li>
+        <li><a href="aboutme.html" class="active">about me</a></li>
+      </ul>
+    </nav>
+  </header>
 
-			<div id="sun" class="celestial-body" style="left: 50%; top: 50%; transform: translate(-50%, -50%);">SUN
-			</div>
-			<div class="celestial-body" id="moon" style="left: 110px; top: 310px;">MOON</div>
-			<div class="celestial-body" id="rising" style="left: 510px; top: 310px;">RISING</div>
-		</div>
+  <main class="about-main">
+    <div class="about-stage">
 
-		<div id="info-panel-sun" class="info-panel info-panel-top">
-			<button class="close-info-panel">×</button>
-			<h3 class="info-title"></h3>
-			<div class="subtitle info-subtitle"></div>
-			<p class="info-content"></p>
-		</div>
+      <!-- LEFT: orrery -->
+      <div class="orrery-col">
+        <div class="orrery" aria-label="Astrological chart navigation">
 
-		<div id="info-panel-moon" class="info-panel info-panel-left">
-			<button class="close-info-panel">×</button>
-			<h3 class="info-title"></h3>
-			<div class="subtitle info-subtitle"></div>
-			<p class="info-content"></p>
-		</div>
+          <div class="orbit orbit-inner"></div>
+          <div class="orbit orbit-outer"></div>
 
-		<div id="info-panel-rising" class="info-panel info-panel-right">
-			<button class="close-info-panel">×</button>
-			<h3 class="info-title"></h3>
-			<div class="subtitle info-subtitle"></div>
-			<p class="info-content"></p>
-		</div>
-	</div>
+          <div class="body" id="sun" data-id="sun" tabindex="0" role="button" aria-label="Sun in Pisces"
+            aria-pressed="false">SUN</div>
 
-	<div id="site-footer" class="footer">
-		<a href="https://www.instagram.com/sofias.space/" target="_blank">instagram</a>
-		<a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank">linkedin</a>
-		<a href="https://vimeo.com/sofiasspace" target="_blank">vimeo</a>
-	</div>
+          <div class="body" id="moon" data-id="moon" tabindex="0" role="button" aria-label="Moon in Taurus"
+            aria-pressed="false">MOON</div>
 
+          <div class="body" id="rising" data-id="rising" tabindex="0" role="button" aria-label="Rising in Cancer"
+            aria-pressed="true">RISING</div>
 
-	<canvas id="mousetrace"></canvas>
+        </div>
+      </div>
 
-	<script src="js/mousetrace.js"></script>
-	<script>
+      <!-- RIGHT: dynamic bio panel -->
+      <div class="bio-col">
 
-		// About page celestial bodies
-		var celestialData = {
-			sun: {
-				title: 'SUN',
-				subtitle: 'in pisces',
-				content: 'check out my <a href="index.html" style="color: #e6e6e6; text-decoration: underline;">work</a>'
-			},
-			moon: {
-				title: 'MOON',
-				subtitle: 'in taurus',
-				content: 'check out my <a href="http://bedroom.sofiasweb.art" target="_blank" style="color: #e6e6e6; text-decoration: underline;">bedroom</a>'
-			},
-			rising: {
-				title: 'RISING',
-				subtitle: 'in cancer',
-				content: 'Sofia Pace is a New York based visual and performing artist of Peruvian and Italian origins. Her early learning of art and design set her foundational interest for space and how it can function meaningfully and artistically through installation and set design, while her latter research and creative work have driven her to seek, recognize, and explore connections between visual art and performance. In her recent artistic work, she diving deeper into explore creative technology as as NYU ITP student.'
-			}
-		};
+        <!-- Static header — title never moves -->
+        <div class="bio-header">
+          <div class="bio-sign" id="bio-sign">cancer ↑</div>
+          <div class="bio-title" id="bio-title">rising</div>
+        </div>
 
-		var bodies = document.querySelectorAll('.celestial-body');
-		for (var i = 0; i < bodies.length; i++) {
-			bodies[i].addEventListener('click', function (e) {
-				e.stopPropagation();
-				var id = this.id;
-				var panel = document.getElementById('info-panel-' + id);
-				var isActive = this.classList.contains('active');
+        <div class="bio-divider"></div>
 
-				// Hide all panels
-				var allPanels = document.querySelectorAll('.info-panel');
-				for (var k = 0; k < allPanels.length; k++) {
-					allPanels[k].classList.remove('active');
-				}
+        <!-- RISING content (default, auto-open) -->
+        <div class="bio-content active" id="content-rising">
+          <p class="bio-text">
+            Sofia Pace is a multidisciplinary performance artist whose work explores the inner self through the body and
+            its material conditions.
+            Drawing from her Latin American upbringing and improvisational movement practices, she engages ephemerality,
+            embodied memory, nostalgia, and found archives as sites of both inquiry and celebration.
+            Working across dance, web-based media, and textile forms, her practice examines how corporeality is shaped,
+            distorted, and performed, rendering the body abstract in shape but real in motion.
+          </p>
+          <div class="bio-contact">
+            <div class="bio-contact-label">contact me here:</div>
+            <a href="mailto:sofia@sofiasweb.art">sofiass.sspace@gmail.com</a>
+          </div>
+        </div>
 
-				// Remove active from all bodies
-				var allBodies = document.querySelectorAll('.celestial-body');
-				for (var j = 0; j < allBodies.length; j++) {
-					allBodies[j].classList.remove('active');
-				}
+        <!-- SUN content -->
+        <div class="bio-content" id="content-sun">
+          <p class="bio-text">
+            check out my <a href="work.html">work ↗</a>
+          </p>
+        </div>
 
-				if (!isActive) {
-					this.classList.add('active');
-					var titleEl = panel.querySelector('.info-title');
-					var subtitleEl = panel.querySelector('.info-subtitle');
-					var contentEl = panel.querySelector('.info-content');
+        <!-- MOON content -->
+        <div class="bio-content" id="content-moon">
+          <p class="bio-text">
+            check out my <a href="http://bedroom.sofiasweb.art" target="_blank" rel="noopener">bedroom ↗</a>
+          </p>
+        </div>
 
-					titleEl.textContent = celestialData[id].title;
-					subtitleEl.textContent = celestialData[id].subtitle;
-					contentEl.innerHTML = celestialData[id].content;
-					panel.classList.add('active');
-				}
-			});
-		}
+        <!-- Sign chips — also trigger panel swaps -->
+        <div class="sign-chips" aria-label="Navigate by astrological sign">
+          <button class="chip active" data-target="rising" aria-pressed="true">↑ cancer</button>
+          <button class="chip" data-target="sun" aria-pressed="false">☉ pisces</button>
+          <button class="chip" data-target="moon" aria-pressed="false">☽ taurus</button>
+        </div>
 
-		// Close button functionality
-		var closeButtons = document.querySelectorAll('.close-info-panel');
-		for (var i = 0; i < closeButtons.length; i++) {
-			closeButtons[i].addEventListener('click', function (e) {
-				e.stopPropagation();
-				var allPanels = document.querySelectorAll('.info-panel');
-				for (var k = 0; k < allPanels.length; k++) {
-					allPanels[k].classList.remove('active');
-				}
-				var allBodies = document.querySelectorAll('.celestial-body');
-				for (var j = 0; j < allBodies.length; j++) {
-					allBodies[j].classList.remove('active');
-				}
-			});
-		}
+      </div><!-- /bio-col -->
+    </div><!-- /about-stage -->
+  </main>
 
-		// Close panels when clicking anywhere on the page (but not navigation)
-		document.addEventListener('click', function (e) {
-			// Don't close if clicking on navigation
-			if (e.target.closest('.header-nav')) {
-				return;
-			}
+  <footer id="site-footer" class="footer">
+    <a href="https://www.instagram.com/sofias.space/" target="_blank" rel="noopener">instagram</a>
+    <a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://vimeo.com/sofiasspace" target="_blank" rel="noopener">vimeo</a>
+  </footer>
 
-			var allPanels = document.querySelectorAll('.info-panel');
-			for (var k = 0; k < allPanels.length; k++) {
-				allPanels[k].classList.remove('active');
-			}
+  <canvas id="mousetrace"></canvas>
+  <script src="js/mousetrace.js"></script>
 
-			var allBodies = document.querySelectorAll('.celestial-body');
-			for (var j = 0; j < allBodies.length; j++) {
-				allBodies[j].classList.remove('active');
-			}
-		});
+  <script src="js/starfield.js"></script>
 
-	</script>
+  <script>
+    // Celestial data
+    const data = {
+      rising: { sign: 'cancer ↑', title: 'rising' },
+      sun: { sign: 'pisces ☉', title: 'sun' },
+      moon: { sign: 'taurus ☽', title: 'moon' },
+    };
 
+    function activate(id) {
+      // Update orrery bodies
+      document.querySelectorAll('.body').forEach(b => {
+        const active = b.dataset.id === id;
+        b.classList.toggle('active', active);
+        b.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      // Swap content
+      document.querySelectorAll('.bio-content').forEach(c =>
+        c.classList.toggle('active', c.id === 'content-' + id));
+      // Sync chips
+      document.querySelectorAll('.chip').forEach(c => {
+        const active = c.dataset.target === id;
+        c.classList.toggle('active', active);
+        c.setAttribute('aria-pressed', active ? 'true' : 'false');
+      });
+      // Update static header — only sign label changes, title too
+      document.getElementById('bio-sign').textContent = data[id].sign;
+      document.getElementById('bio-title').textContent = data[id].title;
+    }
+
+    // Auto-open rising on load
+    activate('rising');
+
+    // Orrery body clicks + keyboard
+    document.querySelectorAll('.body').forEach(body => {
+      body.addEventListener('click', e => { e.stopPropagation(); activate(body.dataset.id); });
+      body.addEventListener('keypress', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(body.dataset.id); }
+      });
+    });
+
+    // Sign chip clicks
+    document.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', e => { e.stopPropagation(); activate(chip.dataset.target); });
+    });
+  </script>
 </body>
 
 </html>

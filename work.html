@@ -2,79 +2,201 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="src/icon.png">
-    <title>work - sofia pace</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="css/header-nav.css">
-    <link rel="stylesheet" type="text/css" href="css/work-gallery.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="src/starIcon.png">
+  <title>work — sofia pace</title>
+  <meta name="description" content="Work by Sofia Pace — performance, media, new media, design, web art">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header-nav.css">
+  <link rel="stylesheet" href="css/work.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <div class="header">
-        <div class="logo-title">
-            <a href="index.html" style="text-decoration: none;">
-                <h1>sofia pace</h1>
-            </a>
-        </div>
-        <nav class="header-nav">
-            <ul>
-                <li><a href="work.html" class="active">work</a></li>
-                <li><a href="aboutme.html">about me</a></li>
-            </ul>
-        </nav>
+
+  <div class="starfield" id="starfield"></div>
+
+  <header class="site-header">
+    <a href="index.html" class="logo">sofia <em>pace</em></a>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="work.html" class="active">work</a></li>
+        <li><a href="aboutme.html">about me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="work-main">
+
+    <!-- Filter bar -->
+    <div class="filter-bar" role="navigation" aria-label="Filter projects by category">
+      <span class="filter-label">filter —</span>
+      <button class="filter-btn active" data-filter="all">all</button>
+      <button class="filter-btn" data-filter="performance">
+        <span class="dot" style="background:#8178DE;"></span>performance
+      </button>
+      <button class="filter-btn" data-filter="media">
+        <span class="dot" style="background:#F7C3E8;"></span>media
+      </button>
+      <button class="filter-btn" data-filter="newmedia">
+        <span class="dot" style="background:#E8CF6D;"></span>new media
+      </button>
+      <button class="filter-btn" data-filter="design">
+        <span class="dot" style="background:#D6DE78;"></span>design
+      </button>
+      <button class="filter-btn" data-filter="webart">
+        <span class="dot" style="background:#78B0DE;"></span>web art
+      </button>
     </div>
 
-    <main>
-        <!-- Category Filter -->
-        <div class="filter-bar">
-            <button class="filter-btn active" data-category="all">all</button>
-            <button class="filter-btn" data-category="performance">performance</button>
-            <button class="filter-btn" data-category="media">media</button>
-            <button class="filter-btn" data-category="newmedia">new media</button>
-            <button class="filter-btn" data-category="design">design</button>
-            <a href="https://sofiasweb.art" target="_blank" class="filter-btn web-art-btn">web art</a>
-        </div>
-
-        <!-- Projects Grid -->
-        <div class="projects-container">
-            <svg class="constellation-lines" id="constellationLines"></svg>
-            <div class="projects-grid" id="projectsGrid"></div>
-        </div>
-
-        <!-- Project Detail Panel -->
-        <div class="project-detail" id="projectDetail">
-            <button class="close-detail" id="closeDetail">&times;</button>
-            <div class="detail-content">
-                <h2 class="detail-title"></h2>
-                <p class="detail-date"></p>
-                <p class="detail-role"></p>
-                <div class="detail-tags"></div>
-                <div class="detail-media"></div>
-                <div class="detail-description"></div>
+    <!-- project grid -->
+    <!-- 
+      To add a project:
+        <div class="card" data-cats="performance media">
+          <a href="project.html?id=your-project-id">
+            <div class="card-img">
+              <img src="src/projects/your-image.jpg" alt="Project title" loading="lazy">
             </div>
+            <div class="card-info">
+              <div class="card-title">Project Title</div>
+              <div class="card-tags">
+                <span class="tag tag-performance">performance</span>
+                <span class="tag tag-media">media</span>
+              </div>
+            </div>
+          </a>
         </div>
-    </main>
+    -->
 
-    <div id="site-footer" class="footer">
-        <a href="https://www.instagram.com/sofias.space/" target="_blank">instagram</a>
-        <a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank">linkedin</a>
-        <a href="https://vimeo.com/sofiasspace" target="_blank">vimeo</a>
+    <div class="masonry" id="masonry">
+
+      <!-- Example project cards — replace src and content with your real projects -->
+      <div class="card" data-cats="performance newmedia">
+        <a href="project pages/cinestesia.html">
+          <div class="card-img">
+            <img src="work/cinestesia/cinestesia.jpg" alt="untitled body study" loading="lazy">
+          </div>
+          <div class="card-info">
+            <div class="card-title">cinestesia</div>
+            <div class="card-tags">
+              <span class="tag tag-performance">performance</span>
+              <span class="tag tag-newmedia">new media</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-cats="design newmedia">
+        <a href="project pages/bodyastextile.html">
+          <div class="card-img">
+            <img src="work/body as textile/bodyastextile.jpg" alt="body as textile" loading="lazy">
+          </div>
+          <div class="card-info">
+            <div class="card-title">body as textile</div>
+            <div class="card-tags">
+              <span class="tag tag-design">design</span>
+              <span class="tag tag-newmedia">new media</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-cats="performance newmedia">
+        <a href="project pages/periodgod.html">
+          <div class="card-img">
+            <img src="work/period god/periodgod.jpeg" alt="period god" loading="lazy">
+          </div>
+          <div class="card-info">
+            <div class="card-title">period god</div>
+            <div class="card-tags">
+              <span class="tag tag-performance">performance</span>
+              <span class="tag tag-newmedia">new media</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="card" data-cats="media">
+        <a href="project pages/lamuerteseescribesola.html">
+          <div class="card-img">
+            <img src="work/la%20muerte/varela.gif" alt="la muerte se escribe sola" loading="lazy">
+          </div>
+          <div class="card-info">
+            <div class="card-title">la muerte se escribe sola</div>
+            <div class="card-tags">
+              <span class="tag tag-media">media</span>
+
+            </div>
+          </div>
+        </a>
+      </div>
+
     </div>
 
-    <canvas id="mousetrace"></canvas>
+    <!-- empty state -->
+    <!-- <div class="empty-state" id="empty-state" style="display:none;">
+      <p>no projects in this category yet</p>
+    </div> -->
 
-    <script src="js/mousetrace.js"></script>
-    <script src="js/work-gallery.js"></script>
+  </main>
+
+  <footer id="site-footer" class="footer">
+    <a href="https://www.instagram.com/sofias.space/" target="_blank" rel="noopener">instagram</a>
+    <a href="https://www.linkedin.com/in/sofia-pace-108162231/" target="_blank" rel="noopener">linkedin</a>
+    <a href="https://vimeo.com/sofiasspace" target="_blank" rel="noopener">vimeo</a>
+  </footer>
+
+  <canvas id="mousetrace"></canvas>
+  <script src="js/mousetrace.js"></script>
+  <script src="js/starfield.js"></script>
+  <script>
+
+    // Filter logic
+    const btns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+    const empty = document.getElementById('empty-state');
+
+    function applyFilter(filter) {
+      let visible = 0;
+      cards.forEach(card => {
+        const cats = (card.dataset.cats || '').split(' ');
+        const show = filter === 'all' || cats.includes(filter);
+        card.style.display = show ? 'block' : 'none';
+        if (show) visible++;
+      });
+      empty.style.display = visible === 0 ? 'block' : 'none';
+      // update URL param without reload
+      const url = new URL(window.location);
+      if (filter === 'all') url.searchParams.delete('category');
+      else url.searchParams.set('category', filter);
+      history.replaceState({}, '', url);
+    }
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        applyFilter(btn.dataset.filter);
+      });
+    });
+
+    // Apply filter from URL param (e.g. coming from home page star click)
+    const params = new URLSearchParams(window.location.search);
+    const cat = params.get('category');
+    if (cat) {
+      const matching = document.querySelector(`.filter-btn[data-filter="${cat}"]`);
+      if (matching) {
+        btns.forEach(b => b.classList.remove('active'));
+        matching.classList.add('active');
+        applyFilter(cat);
+      }
+    }
+  </script>
 </body>
 
 </html>

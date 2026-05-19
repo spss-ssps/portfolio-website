@@ -1,231 +1,134 @@
-/* Header with Inline Navigation */
-
-body {
-    background-color: #0d0d0d;
-    margin: 0;
-    padding: 0;
+/* --- Site header --- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px 14px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+  background: #0d0d0d;
 }
 
-/* Header */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 900;
-    font-family: Comfortaa, sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    padding: 2rem 2rem;
-    background: #0d0d0d;
-    box-sizing: border-box;
+/* Logo */
+.logo {
+  font-family: 'comfortaa', sans-serif;
+  font-size: 45px;
+  color: #e8e4f0;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: opacity 0.2s;
 }
 
-.logo-title {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
+.logo:hover {
+  opacity: 0.75;
 }
 
-.logo-title h1 {
-    margin: 0;
-    font-size: clamp(3.5rem, 3vw, 2.5rem);
-    color: #e6e6e6;
-    font-weight: 300;
-    letter-spacing: 0.05em;
-    transition: opacity 0.3s ease;
+.logo em {
+  color: #9d8fd0;
+  font-style: italic;
 }
 
-.logo-title h1:hover {
-    opacity: 0.7;
-}
-
-/* Header Navigation */
+/* Nav */
 .header-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 2rem;
-    align-items: center;
+  list-style: none;
+  display: flex;
+  gap: 22px;
 }
 
-.header-nav ul li {
-    position: relative;
+.header-nav a {
+  font-family: 'Space Mono', monospace;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.38);
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+  position: relative;
 }
 
-.header-nav ul li a {
-    text-decoration: none;
-    color: rgba(230, 230, 230, 0.7);
-    font-size: 1rem;
-    font-family: 'Comfortaa', sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    transition: all 0.3s ease;
-    text-transform: lowercase;
-    cursor: pointer;
-    position: relative;
+.header-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 0.5px;
+  background: #9d8fd0;
+  transform: scaleX(0);
+  transition: transform 0.2s;
 }
 
-.header-nav ul li a:hover {
-    color: #e6e6e6;
+.header-nav a:hover {
+  color: rgba(255, 255, 255, 0.85);
 }
 
-.header-nav ul li a.active {
-    color: #e6e6e6;
+.header-nav a:hover::after {
+  transform: scaleX(1);
 }
 
-.header-nav ul li a.active::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: calc(100% + 1.2rem);
-    height: calc(100% + 1.2rem);
-    border: 1px solid rgba(230, 230, 230, 0.4);
-    border-radius: 50%;
-    pointer-events: none;
-    aspect-ratio: 1/1;
+.header-nav a.active {
+  color: rgba(255, 255, 255, 0.85);
 }
 
-/* Dropdown */
-.nav-dropdown {
-    position: relative;
+.header-nav a.active::after {
+  transform: scaleX(1);
 }
 
-.nav-dropdown>a::after {
-    content: ' ↓';
-    font-size: 0.7em;
-    margin-left: 0.2rem;
-    transition: transform 0.3s ease;
-    display: inline-block;
+/* Spacer so fixed header doesn't overlap content */
+main,
+.page {
+  padding-top: 56px;
 }
 
-.nav-dropdown.active>a::after {
-    transform: rotate(180deg);
+/* --- Footer --- */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+  padding: 12px;
+  border-top: 0.5px solid var(--border);
 }
 
-.nav-dropdown-content {
-    position: absolute;
-    top: calc(100% + 1rem);
-    left: 0;
-    background: rgba(13, 13, 13, 0.95);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(230, 230, 230, 0.2);
-    border-radius: 8px;
-    padding: 0.75rem 0;
-    min-width: 150px;
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+.footer a {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  color: var(--fg-muted);
+  text-decoration: none;
+  transition: color 0.2s;
 }
 
-.nav-dropdown.active .nav-dropdown-content {
-    max-height: 300px;
-    opacity: 1;
+.footer a:hover {
+  color: var(--fg);
 }
 
-.nav-dropdown-content li {
-    margin: 0;
-}
-
-.nav-dropdown-content a {
-    display: block;
-    padding: 0.5rem 1.25rem;
-    font-size: 0.9rem !important;
-    color: rgba(230, 230, 230, 0.7) !important;
-    white-space: nowrap;
-}
-
-.nav-dropdown-content a:hover {
-    color: #0d0d0d !important;
-    background: #e6e6e6;
-}
-
-/* Footer with Social Links */
-.footer,
-#site-footer {
-    font-family: 'Space Mono', monospace;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    text-align: center;
-    font-size: clamp(0.8rem, 1vw, 0.9rem);
-    z-index: 10;
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem;
-    white-space: nowrap;
-}
-
-.footer a,
-#site-footer a {
-    color: rgba(230, 230, 230, 0.5);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-family: 'Space Mono', monospace;
-}
-
-.footer a:hover,
-#site-footer a:hover {
-    color: #e6e6e6;
-}
-
-#mousetrace {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 999;
-}
-
-/* Responsive */
+/* --- Responsive --- */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        padding: 1.5rem;
-    }
+  .site-header {
+    padding: 14px 18px 12px;
+  }
 
-    .logo-title h1 {
-        font-size: 3rem;
-    }
+  .logo {
+    font-size: 30px;
+  }
 
-    .header-nav ul {
-        gap: 1.5rem;
-        flex-wrap: wrap;
-    }
+  .header-nav a {
+    font-size: 12px;
+  }
 
-    .header-nav ul li a {
-        font-size: 0.9rem;
-    }
+  .header-nav ul {
+    gap: 16px;
+  }
 
-    .footer,
-    #site-footer {
-        gap: 0.5rem;
-        font-size: 0.75rem;
-        overflow-x: auto;
-        flex-direction: row;
-        flex-wrap: nowrap;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-title h1 {
-        font-size: 2.4rem;
-    }
+  .footer a {
+    font-size: 10px;
+  }
 }
