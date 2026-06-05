@@ -1,6 +1,6 @@
 .project-main {
   padding-top: 80px;
-  padding-bottom: 20px;
+  padding-bottom: 96px;
   max-width: 820px;
   margin: 0 auto;
 }
@@ -202,6 +202,18 @@
   border-radius: 6px;
   background: #181520;
   object-fit: cover;
+}
+
+.img-solo {
+  display: block;
+}
+
+.img-solo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  background: #141820;
 }
 
 .img-pair {

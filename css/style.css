@@ -175,17 +175,7 @@ body {
   color: var(--fg);
   white-space: nowrap;
   text-align: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 0.3s, visibility 0.3s;
   pointer-events: none;
-}
-
-.star:hover span,
-.star:focus span,
-.star a:hover span {
-  visibility: visible;
-  opacity: 1;
 }
 
 /* --- Shared: cards / tags --- */
