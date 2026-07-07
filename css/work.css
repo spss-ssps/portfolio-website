@@ -2,7 +2,7 @@
   min-height: 100vh;
   padding-top: 56px;
   /* header height */
-  padding-bottom: 52px;
+  padding-bottom: 80px;
   /* footer height */
 }
 
@@ -115,6 +115,15 @@
   padding: 9px 2px 4px;
 }
 
+.work-copyright {
+  padding: 2px 28px 0px;
+  text-align: center;
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.20);
+}
+
 .card-title {
   font-family: 'Space Mono', monospace;
   font-size: 13px;
@@ -170,5 +179,10 @@
   .filter-btn {
     font-size: 10px;
     padding: 4px 10px;
+  }
+
+  .work-copyright {
+    padding: 2px 16px 0px;
+    font-size: 9px;
   }
 }

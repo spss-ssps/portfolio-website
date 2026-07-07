@@ -230,6 +230,14 @@
   background: #141820;
 }
 
+.project-body .section-img .instagram-media {
+  display: block;
+  width: min(100%, 360px) !important;
+  max-width: 420px !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+}
+
 .soft-divider {
   height: 0.5px;
   background: rgba(255, 255, 255, 0.06);
@@ -349,6 +357,11 @@
 
   .section-img {
     padding: 0 18px;
+  }
+
+  .project-body .section-img .instagram-media {
+    width: 100% !important;
+    max-width: none !important;
   }
 
   .hero-web-wrap {
