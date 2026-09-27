@@ -15,12 +15,20 @@
 
 /* Logo */
 .logo {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   font-family: 'comfortaa', sans-serif;
   font-size: 45px;
   color: #e8e4f0;
   letter-spacing: 0.04em;
   text-decoration: none;
   transition: opacity 0.2s;
+  line-height: 1;
+}
+
+.logo-default {
+  display: inline-block;
 }
 
 .logo:hover {

@@ -42,6 +42,7 @@
   object-fit: cover;
   display: block;
   background: #181420;
+  border-radius: 8px;
 }
 
 /* video embed */
@@ -119,18 +120,14 @@
 /* --- Meta strip --- */
 .meta-strip {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  border-top: 0.5px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+  grid-template-columns: 1fr;
+  gap: 4px;
+  padding: 8px 0 4px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
 }
 
 .meta-cell {
-  padding: 16px 28px;
-  border-right: 0.5px solid rgba(255, 255, 255, 0.08);
-}
-
-.meta-cell:last-child {
-  border-right: none;
+  padding: 12px 28px;
 }
 
 .meta-label {
@@ -160,7 +157,6 @@
   flex-wrap: wrap;
   gap: 6px;
   padding: 14px 20px;
-  border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
 }
 
 /* --- Project body --- */
@@ -199,7 +195,7 @@
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 6px;
+  border-radius: 8px;
   background: #181520;
   object-fit: cover;
 }
@@ -214,6 +210,7 @@
   display: block;
   object-fit: cover;
   background: #141820;
+  border-radius: 8px;
 }
 
 .img-pair {
@@ -228,6 +225,7 @@
   display: block;
   object-fit: cover;
   background: #141820;
+  border-radius: 8px;
 }
 
 .project-body .section-img .instagram-media {
@@ -246,7 +244,11 @@
 
 /* --- Collaborators --- */
 .collaborators {
-  padding: 28px 28px 8px;
+  padding: 18px 28px 8px;
+}
+
+.meta-strip+.collaborators {
+  padding-top: 18px;
 }
 
 .collab-list {
@@ -332,15 +334,6 @@
 
   .hero-title {
     font-size: 22px;
-  }
-
-  .meta-strip {
-    grid-template-columns: 1fr;
-  }
-
-  .meta-cell {
-    border-right: none;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
   }
 
   .meta-cell:last-child {
