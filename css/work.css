@@ -66,15 +66,22 @@
 
 /* --- Grid --- */
 .masonry {
-  padding: 40px 28px 40px;
+  padding: 60px 48px 60px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  gap: 30px;
 }
 
 .card {
   display: block;
   margin-bottom: 0;
+  padding: 14px;
+  border: 1px solid var(--border);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px) rotate(-0.4deg);
 }
 
 .card a {
@@ -86,7 +93,6 @@
 .card-img {
   width: 100%;
   aspect-ratio: 3 / 2;
-  border-radius: 6px;
   overflow: hidden;
   background: #181818;
   display: block;
@@ -113,7 +119,7 @@
 }
 
 .card-info {
-  padding: 9px 2px 4px;
+  padding: 12px 2px 12px;
 }
 
 .work-copyright {
