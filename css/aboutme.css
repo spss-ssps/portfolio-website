@@ -179,6 +179,54 @@ body {
   }
 }
 
+.bio-text-title {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.03em;
+  max-width: 400px;
+}
+
+.cv-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cv-entries {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.cv-entry {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 12px;
+  max-width: 480px;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  line-height: 2.1;
+}
+
+.cv-year {
+  grid-row: span 2;
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.cv-entry em {
+  grid-column: 2;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.cv-venue {
+  grid-column: 2;
+  color: rgba(255, 255, 255, 0.42);
+}
+
 .bio-text {
   font-family: 'Space Mono', monospace;
   font-size: 14px;
@@ -324,6 +372,12 @@ body {
 
   .bio-text {
     max-width: 100%;
+    font-size: 12px;
+  }
+
+  .cv-entry {
+    grid-template-columns: 40px minmax(0, 1fr);
+    gap: 8px;
     font-size: 12px;
   }
 
